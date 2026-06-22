@@ -1,6 +1,10 @@
 # Personal notes — keep local, never publish
 information.txt
 
+# Old job-application CV (contains phone, etc.) — never publish
+*.pdf
+cv_original.pdf
+
 # Photos not used on the page (keep local, not public)
 images/2.jpg
 images/3.jpg

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuting Zhong — Curriculum Vitae</title>
+  <style>
+    :root{
+      --ink:#1a1a1a; --muted:#5f5f5f; --accent:#1f5c3a; --rule:#d9d6cf; --bg:#ffffff;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0; background:#f0efe9; color:var(--ink);
+      font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Songti SC",serif;
+      line-height:1.5; font-size:14px;
+    }
+    .page{
+      max-width:820px; margin:24px auto; background:var(--bg);
+      padding:48px 56px; box-shadow:0 1px 8px rgba(0,0,0,.12);
+      border-top:4px solid var(--accent);
+    }
+    /* print toolbar */
+    .toolbar{max-width:820px; margin:16px auto 0; text-align:right;}
+    .toolbar button{
+      font:inherit; font-size:13px; cursor:pointer; background:var(--accent); color:#fff;
+      border:0; border-radius:4px; padding:.45rem 1rem;
+    }
+    /* header */
+    header{display:flex; justify-content:space-between; align-items:flex-start; gap:1rem;
+           border-bottom:2px solid var(--ink); padding-bottom:14px; margin-bottom:18px;}
+    h1{margin:0; font-size:26px; font-weight:600;}
+    h1 .cn{font-size:16px; color:var(--muted); margin-left:.4rem;}
+    .subtitle{margin:4px 0 0; color:var(--muted); font-style:italic;}
+    .contact{text-align:right; font-size:12.5px; color:var(--muted); line-height:1.7; white-space:nowrap;}
+    .contact a{color:var(--accent); text-decoration:none;}
+    /* sections */
+    h2{font-size:14px; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent);
+       margin:20px 0 8px; padding-bottom:3px; border-bottom:1px solid var(--rule);}
+    .row{display:flex; justify-content:space-between; gap:1rem; align-items:baseline;}
+    .row .date{color:var(--muted); font-size:12.5px; white-space:nowrap;}
+    .inst{font-weight:600;}
+    .sub{color:var(--muted); font-style:italic; margin:1px 0 4px;}
+    ul{margin:5px 0 10px; padding-left:18px;}
+    li{margin:3px 0;}
+    .role{font-style:italic; color:var(--muted);}
+    p{margin:5px 0;}
+    .pub{margin:8px 0;}
+    .pub .ptitle{font-weight:600;}
+    .tag{display:inline-block; font-size:10.5px; letter-spacing:.5px; text-transform:uppercase;
+         color:var(--accent); border:1px solid var(--accent); border-radius:3px; padding:0 5px; margin-left:6px;}
+    .note{font-size:12px; color:var(--muted);}
+    dl.skills{display:grid; grid-template-columns:max-content 1fr; gap:3px 14px; margin:6px 0;}
+    dl.skills dt{font-weight:600;}
+    dl.skills dd{margin:0; color:#333;}
+    @media print{
+      body{background:#fff;}
+      .toolbar{display:none;}
+      .page{box-shadow:none; margin:0; max-width:none; padding:0 6mm;}
+      @page{margin:14mm;}
+      a{color:var(--ink); text-decoration:none;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <button onclick="window.print()">🖨 Print / Save as PDF</button>
+  </div>
+
+  <div class="page">
+
+    <header>
+      <div>
+        <h1>Yuting Zhong <span class="cn">钟玉婷</span></h1>
+        <p class="subtitle">M.S. Student in Data Science (Artificial Intelligence), University of Macau</p>
+      </div>
+      <div class="contact">
+        <a href="mailto:mc56403@um.edu.mo">mc56403@um.edu.mo</a><br/>
+        <a href="https://zyt2312.github.io">zyt2312.github.io</a><br/>
+        <a href="https://github.com/zyt2312">github.com/zyt2312</a><br/>
+        Macau SAR, China
+      </div>
+    </header>
+
+    <h2>Research Interests</h2>
+    <p>
+      Evaluation of large language models — LLM-as-a-judge, rubric-based and reference-free
+      evaluation, and reward modeling; with broader interests in agents, reinforcement learning,
+      and trustworthy, reproducible NLP. I aim to pursue a <strong>Ph.D.</strong> and build a
+      research career in academia.
+    </p>
+
+    <h2>Education</h2>
+    <div class="row">
+      <span class="inst">University of Macau</span>
+      <span class="date">2025.09 – 2027.07 (expected)</span>
+    </div>
+    <div class="sub">M.S. in Data Science (Artificial Intelligence) · GPA 3.62/4.0 · Advisor: Prof. Derek F. Wong (NLP²CT Lab)</div>
+    <div class="row">
+      <span class="inst">Guangdong University of Foreign Studies</span>
+      <span class="date">2021.09 – 2025.06</span>
+    </div>
+    <div class="sub">B.Eng. in Computer Science and Technology · GPA 3.75/4.0 · Outstanding Graduate</div>
+
+    <h2>Publications</h2>
+    <p class="note">(* denotes equal contribution / co-first authorship.)</p>
+    <div class="pub">
+      <div class="ptitle">DeepResearch RewardBench: Evaluating Reward Models for Deep Research Reports <span class="tag">In submission · EMNLP 2026</span></div>
+      <div>Shudong Liu*, <strong>Yuting Zhong*</strong>, Guanhua Chen, Xinyi Yang, Junnan Liu, Lidia S. Chao, Jiaheng Liu, Derek F. Wong. (2026).</div>
+    </div>
+    <div class="pub">
+      <div class="ptitle">CultMetric: A Gloss-Grounded Multi-Pillar Framework for Human-Free Cultural Fidelity Evaluation in Classical Chinese Translation <span class="tag">In submission · ACL ARR 2026</span></div>
+      <div>Bhaskar Ganesh Devalla*, <strong>Yuting Zhong*</strong>, Dejing Zhou, Junchao Wu, Shudong Liu, Lidia S. Chao, Derek F. Wong. (2026).</div>
+    </div>
+
+    <h2>Research Experience</h2>
+
+    <div class="row">
+      <span class="inst">DeepResearch RewardBench — Reward-Model Benchmark for Deep-Research Reports</span>
+      <span class="date">2025 – 2026</span>
+    </div>
+    <div class="role">Co-first author (2nd listed) · NLP²CT Lab, University of Macau</div>
+    <ul>
+      <li>Built the first reward-model evaluation benchmark targeting long-form "deep research" reports, addressing a gap in existing LLM evaluation.</li>
+      <li>Designed and implemented an end-to-end data pipeline: aggregated reports from 19 families of agents/LLMs, scored them under the original evaluation protocol, and through multi-round automatic filtering (scoring consistency, length matching, score-gap constraints) plus PhD-level human verification, constructed pair/triplet/quadruplet preference datasets (<strong>331 tasks, 866 reports</strong>).</li>
+      <li>Systematically evaluated <strong>17 models from 7B to 235B</strong>, designing two metric families (Best-of-N selection and full-ranking consistency); ran analyses on URL robustness, input-order bias, and comparative vs. pointwise scoring paradigms.</li>
+      <li>Distilled a four-category error taxonomy for judge models and operationalized it as a few-shot automatic classifier reaching <strong>~87% agreement</strong> with human annotation.</li>
+    </ul>
+
+    <div class="row">
+      <span class="inst">CultMetric — Cultural-Fidelity Evaluation for Classical Chinese Translation</span>
+      <span class="date">2026</span>
+    </div>
+    <div class="role">Co-first author (2nd listed) · NLP²CT Lab, University of Macau</div>
+    <ul>
+      <li>Proposed a human-free, neuro-symbolic evaluation framework grounded in a glossary of <strong>872 culture-specific items</strong>, with five pillars (semantic density, back-translation drift, cultural-anchor stability, asymmetric cultural distance, paraphrase alignment) aggregated by weighted geometric mean for deterministic, reproducible, decomposable scores.</li>
+      <li>Evaluated 4 machine-translation systems on the first five chapters of <em>Journey to the West</em> (1,598 segments per system).</li>
+      <li>Validated discriminative power and independence with Wilcoxon signed-rank tests and Spearman correlation: system-level ranking matched expert judgement exactly, while sample-level correlation with 5 mainstream metrics stayed low (|ρ| &lt; 0.15).</li>
+    </ul>
+
+    <h2>Technical Skills</h2>
+    <dl class="skills">
+      <dt>Programming</dt><dd>Python, C/C++</dd>
+      <dt>ML &amp; AI</dt><dd>LLM evaluation &amp; application, NLP, model inference &amp; deployment, prompt / few-shot methods; PyTorch, TensorFlow</dd>
+      <dt>Data Science</dt><dd>Data collection &amp; cleaning, large-scale text processing, feature engineering, statistical hypothesis testing (Wilcoxon signed-rank, Spearman correlation), TF-IDF, graph algorithms (graph edit distance)</dd>
+      <dt>Tools</dt><dd>Linux, Git, LaTeX</dd>
+      <dt>Languages</dt><dd>Chinese (native); English (fluent academic reading &amp; writing; CET-4, CET-6)</dd>
+    </dl>
+
+    <h2>Honors &amp; Awards</h2>
+    <ul>
+      <li>Provincial Second Prize, Chinese Mathematics Competition for College Students</li>
+      <li>Outstanding Graduate Award, Guangdong University of Foreign Studies</li>
+      <li>University Comprehensive Scholarship (multiple times)</li>
+      <li>"Merit Student" and "Outstanding Class Cadre" honors (multiple times)</li>
+    </ul>
+
+    <h2>Selected Coursework</h2>
+    <p>
+      <strong>Graduate (UM):</strong> Applied Natural Language Processing · Deep Learning · Practical Machine Learning · Principles of Artificial Intelligence<br/>
+      <strong>Undergraduate:</strong> Algorithm Design · C++ Programming · Natural Language Processing · Big Data Processing
+    </p>
+
+    <h2>References</h2>
+    <p>Available upon request.</p>
+
+  </div>
+</body>
+</html>
