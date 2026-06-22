@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yuting Zhong — Curriculum Vitae</title>
+  <title>Yuting Zhong 钟玉婷 — Curriculum Vitae</title>
   <style>
     :root{
       --ink:#1a1a1a; --muted:#5f5f5f; --accent:#1f5c3a; --rule:#d9d6cf; --bg:#ffffff;
@@ -14,17 +14,25 @@
       font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Songti SC",serif;
       line-height:1.5; font-size:14px;
     }
+    /* bilingual visibility */
+    body.lang-en .zh{display:none !important;}
+    body.lang-zh .en{display:none !important;}
+    .zh{font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif;}
+
     .page{
       max-width:820px; margin:24px auto; background:var(--bg);
       padding:48px 56px; box-shadow:0 1px 8px rgba(0,0,0,.12);
       border-top:4px solid var(--accent);
     }
-    /* print toolbar */
-    .toolbar{max-width:820px; margin:16px auto 0; text-align:right;}
-    .toolbar button{
-      font:inherit; font-size:13px; cursor:pointer; background:var(--accent); color:#fff;
-      border:0; border-radius:4px; padding:.45rem 1rem;
-    }
+    /* toolbar */
+    .toolbar{max-width:820px; margin:16px auto 0; display:flex; justify-content:space-between; align-items:center;}
+    .toolbar button{font:inherit; font-size:13px; cursor:pointer; border-radius:4px; padding:.45rem 1rem; border:0;}
+    #print-btn{background:var(--accent); color:#fff;}
+    #lang-btn{background:#fff; color:var(--muted); border:1px solid var(--rule); letter-spacing:.5px;}
+    #lang-btn:hover{border-color:var(--accent); color:var(--accent);}
+    body.lang-en #lang-btn .opt-en, body.lang-zh #lang-btn .opt-zh{color:var(--accent); font-weight:600;}
+    #lang-btn .sep{margin:0 .3rem; opacity:.5;}
+
     /* header */
     header{display:flex; justify-content:space-between; align-items:flex-start; gap:1rem;
            border-bottom:2px solid var(--ink); padding-bottom:14px; margin-bottom:18px;}
@@ -63,10 +71,15 @@
     }
   </style>
 </head>
-<body>
+<body class="lang-en">
 
   <div class="toolbar">
-    <button onclick="window.print()">🖨 Print / Save as PDF</button>
+    <button id="lang-btn" type="button" aria-label="Switch language">
+      <span class="opt opt-en">EN</span><span class="sep">/</span><span class="opt opt-zh">中</span>
+    </button>
+    <button id="print-btn" onclick="window.print()">
+      <span class="en">🖨 Print / Save as PDF</span><span class="zh">🖨 打印 / 另存为 PDF</span>
+    </button>
   </div>
 
   <div class="page">
@@ -74,99 +87,163 @@
     <header>
       <div style="flex:1">
         <h1>Yuting Zhong <span class="cn">钟玉婷</span></h1>
-        <p class="subtitle">M.S. Student in Data Science (Artificial Intelligence), University of Macau</p>
+        <p class="subtitle">
+          <span class="en">M.S. Student in Data Science (Artificial Intelligence), University of Macau</span>
+          <span class="zh">澳门大学 · 数据科学(人工智能应用方向)硕士研究生</span>
+        </p>
       </div>
       <div class="contact">
         <a href="mailto:mc56403@um.edu.mo">mc56403@um.edu.mo</a><br/>
         <a href="https://zyt2312.github.io">zyt2312.github.io</a><br/>
         <a href="https://github.com/zyt2312">github.com/zyt2312</a><br/>
-        Macau SAR, China
+        <span class="en">Macau SAR, China</span><span class="zh">中国澳门特别行政区</span>
       </div>
       <img class="cv-photo" src="images/1.jpg" alt="Yuting Zhong" />
     </header>
 
-    <h2>Research Interests</h2>
-    <p>
+    <h2><span class="en">Research Interests</span><span class="zh">研究兴趣</span></h2>
+    <p class="en">
       Evaluation of large language models — LLM-as-a-judge, rubric-based and reference-free
       evaluation, and reward modeling; with broader interests in agents, reinforcement learning,
       and trustworthy, reproducible NLP. I aim to pursue a <strong>Ph.D.</strong> and build a
       research career in academia.
     </p>
+    <p class="zh">
+      大语言模型评测 —— LLM-as-a-judge、基于评分细则与无参考评测、奖励模型;并对智能体、
+      强化学习以及可信、可复现的自然语言处理有广泛兴趣。我希望攻读<strong>博士学位</strong>,
+      在学术界长期从事研究。
+    </p>
 
-    <h2>Education</h2>
+    <h2><span class="en">Education</span><span class="zh">教育背景</span></h2>
     <div class="row">
-      <span class="inst">University of Macau</span>
-      <span class="date">2025.08 – 2027.07 (expected)</span>
+      <span class="inst"><span class="en">University of Macau</span><span class="zh">澳门大学</span></span>
+      <span class="date">2025.08 – 2027.07 <span class="en">(expected)</span><span class="zh">(预计)</span></span>
     </div>
-    <div class="sub">M.S. in Data Science (Artificial Intelligence) · GPA 3.62/4.0 · Advisor: Prof. Derek F. Wong (NLP²CT Lab)</div>
+    <div class="sub">
+      <span class="en">M.S. in Data Science (Artificial Intelligence) · GPA 3.62/4.0 · Advisor: Prof. Derek F. Wong (NLP²CT Lab)</span>
+      <span class="zh">理学硕士 · 数据科学(人工智能应用方向) · GPA 3.62/4.0 · 导师:Derek F. Wong 教授(NLP²CT 实验室)</span>
+    </div>
     <div class="row">
-      <span class="inst">Guangdong University of Foreign Studies</span>
+      <span class="inst"><span class="en">Guangdong University of Foreign Studies</span><span class="zh">广东外语外贸大学</span></span>
       <span class="date">2021.09 – 2025.06</span>
     </div>
-    <div class="sub">B.Eng. in Computer Science and Technology · GPA 3.75/4.0 · Outstanding Graduate</div>
+    <div class="sub">
+      <span class="en">B.Eng. in Computer Science and Technology · GPA 3.75/4.0 · Outstanding Graduate</span>
+      <span class="zh">工学学士 · 计算机科学与技术 · GPA 3.75/4.0 · 优秀毕业生</span>
+    </div>
 
-    <h2>Publications</h2>
-    <p class="note">(* denotes equal contribution / co-first authorship.)</p>
+    <h2><span class="en">Publications</span><span class="zh">论文成果</span></h2>
+    <p class="note"><span class="en">(* denotes equal contribution / co-first authorship.)</span><span class="zh">(* 表示同等贡献 / 共同第一作者。)</span></p>
     <div class="pub">
-      <div class="ptitle">DeepResearch RewardBench: Evaluating Reward Models for Deep Research Reports <span class="tag">In submission · EMNLP 2026</span></div>
+      <div class="ptitle">DeepResearch RewardBench: Evaluating Reward Models for Deep Research Reports <span class="tag"><span class="en">In submission · EMNLP 2026</span><span class="zh">投稿中 · EMNLP 2026</span></span></div>
       <div>Shudong Liu*, <strong>Yuting Zhong*</strong>, Guanhua Chen, Xinyi Yang, Junnan Liu, Lidia S. Chao, Jiaheng Liu, Derek F. Wong. (2026).</div>
     </div>
     <div class="pub">
-      <div class="ptitle">CultMetric: A Gloss-Grounded Multi-Pillar Framework for Human-Free Cultural Fidelity Evaluation in Classical Chinese Translation <span class="tag">In submission · ACL ARR 2026</span></div>
+      <div class="ptitle">CultMetric: A Gloss-Grounded Multi-Pillar Framework for Human-Free Cultural Fidelity Evaluation in Classical Chinese Translation <span class="tag"><span class="en">In submission · ACL ARR 2026</span><span class="zh">投稿中 · ACL ARR 2026</span></span></div>
       <div>Bhaskar Ganesh Devalla*, <strong>Yuting Zhong*</strong>, Dejing Zhou, Junchao Wu, Shudong Liu, Lidia S. Chao, Derek F. Wong. (2026).</div>
     </div>
 
-    <h2>Research Experience</h2>
+    <h2><span class="en">Research Experience</span><span class="zh">科研经历</span></h2>
 
     <div class="row">
-      <span class="inst">DeepResearch RewardBench — Reward-Model Benchmark for Deep-Research Reports</span>
+      <span class="inst">
+        <span class="en">DeepResearch RewardBench — Reward-Model Benchmark for Deep-Research Reports</span>
+        <span class="zh">DeepResearch RewardBench —— 深度研究报告奖励模型评测基准</span>
+      </span>
       <span class="date">2025 – 2026</span>
     </div>
-    <div class="role">Co-first author (2nd listed) · NLP²CT Lab, University of Macau</div>
-    <ul>
+    <div class="role"><span class="en">Co-first author (2nd listed) · NLP²CT Lab, University of Macau</span><span class="zh">共同第一作者(排名第 2) · NLP²CT 实验室,澳门大学</span></div>
+    <ul class="en">
       <li>Built the first reward-model evaluation benchmark targeting long-form "deep research" reports, addressing a gap in existing LLM evaluation.</li>
       <li>Designed and implemented an end-to-end data pipeline: aggregated reports from 19 families of agents/LLMs, scored them under the original evaluation protocol, and through multi-round automatic filtering (scoring consistency, length matching, score-gap constraints) plus PhD-level human verification, constructed pair/triplet/quadruplet preference datasets (<strong>331 tasks, 866 reports</strong>).</li>
       <li>Systematically evaluated <strong>17 models from 7B to 235B</strong>, designing two metric families (Best-of-N selection and full-ranking consistency); ran analyses on URL robustness, input-order bias, and comparative vs. pointwise scoring paradigms.</li>
       <li>Distilled a four-category error taxonomy for judge models and operationalized it as a few-shot automatic classifier reaching <strong>~87% agreement</strong> with human annotation.</li>
     </ul>
+    <ul class="zh">
+      <li>面向大模型自主"深度研究"场景,构建首个针对长篇研究报告的奖励模型评测基准,填补现有评测在该领域的空白。</li>
+      <li>设计并实现端到端数据构建流水线:聚合 19 个家族智能体 / 大模型生成的报告,依据原始评测协议打分,经"评分一致性—长度相近—分差约束"多轮自动过滤与博士级人工校验,构建 pair/triplet/quadruplet 三类偏好数据集(<strong>331 项任务、866 份报告</strong>)。</li>
+      <li>系统评测 <strong>17 个 7B–235B 规模模型</strong>,设计 Best-of-N 选择与全排序一致性两类指标,并完成 URL 鲁棒性、输入顺序偏差、对比式 vs. 打分式范式等多维度实验分析。</li>
+      <li>提炼裁判模型四类错误归因体系,并落地为 few-shot 自动分类器,与人工标注一致率<strong>约 87%</strong>。</li>
+    </ul>
 
     <div class="row">
-      <span class="inst">CultMetric — Cultural-Fidelity Evaluation for Classical Chinese Translation</span>
+      <span class="inst">
+        <span class="en">CultMetric — Cultural-Fidelity Evaluation for Classical Chinese Translation</span>
+        <span class="zh">CultMetric —— 古汉语翻译文化保真度自动评测框架</span>
+      </span>
       <span class="date">2026</span>
     </div>
-    <div class="role">Co-first author (2nd listed) · NLP²CT Lab, University of Macau</div>
-    <ul>
+    <div class="role"><span class="en">Co-first author (2nd listed) · NLP²CT Lab, University of Macau</span><span class="zh">共同第一作者(排名第 2) · NLP²CT 实验室,澳门大学</span></div>
+    <ul class="en">
       <li>Proposed a human-free, neuro-symbolic evaluation framework grounded in a glossary of <strong>872 culture-specific items</strong>, with five pillars (semantic density, back-translation drift, cultural-anchor stability, asymmetric cultural distance, paraphrase alignment) aggregated by weighted geometric mean for deterministic, reproducible, decomposable scores.</li>
       <li>Evaluated 4 machine-translation systems on the first five chapters of <em>Journey to the West</em> (1,598 segments per system).</li>
       <li>Validated discriminative power and independence with Wilcoxon signed-rank tests and Spearman correlation: system-level ranking matched expert judgement exactly, while sample-level correlation with 5 mainstream metrics stayed low (|ρ| &lt; 0.15).</li>
     </ul>
+    <ul class="zh">
+      <li>提出完全无需人工打分的"神经符号"评测框架,以 <strong>872 条文化专有项</strong>词表为符号化知识底座,设计五支柱指标(语义密度、回译漂移、文化锚点稳定性、非对称文化距离、释义对齐),经加权几何平均聚合,保证结果确定、可复现、可分解。</li>
+      <li>在《西游记》前五回、每系统 1,598 段语料上评测 4 个机器翻译系统。</li>
+      <li>结合 Wilcoxon 符号秩检验与 Spearman 相关性分析验证指标判别力与独立性(系统级排序与专家完全一致,与 5 个主流指标样本级相关性 |ρ| &lt; 0.15)。</li>
+    </ul>
 
-    <h2>Technical Skills</h2>
+    <h2><span class="en">Technical Skills</span><span class="zh">专业技能</span></h2>
     <dl class="skills">
-      <dt>Programming</dt><dd>Python, C/C++</dd>
-      <dt>ML &amp; AI</dt><dd>LLM evaluation &amp; application, NLP, model inference &amp; deployment, prompt / few-shot methods; PyTorch, TensorFlow</dd>
-      <dt>Data Science</dt><dd>Data collection &amp; cleaning, large-scale text processing, feature engineering, statistical hypothesis testing (Wilcoxon signed-rank, Spearman correlation), TF-IDF, graph algorithms (graph edit distance)</dd>
-      <dt>Tools</dt><dd>Linux, Git, LaTeX</dd>
-      <dt>Languages</dt><dd>Chinese (native); English (fluent academic reading &amp; writing; CET-4, CET-6)</dd>
+      <dt><span class="en">Programming</span><span class="zh">编程语言</span></dt>
+      <dd>Python, C/C++</dd>
+      <dt><span class="en">ML &amp; AI</span><span class="zh">机器学习与 AI</span></dt>
+      <dd><span class="en">PyTorch, TensorFlow, LLM evaluation &amp; application, NLP, prompt / few-shot methods</span><span class="zh">PyTorch、TensorFlow、大语言模型评测与应用、自然语言处理、Prompt / Few-shot 方法</span></dd>
+      <dt><span class="en">Data Science</span><span class="zh">数据科学</span></dt>
+      <dd><span class="en">Statistical hypothesis testing (Wilcoxon signed-rank, Spearman correlation), TF-IDF, feature engineering, graph algorithms (graph edit distance)</span><span class="zh">统计假设检验(Wilcoxon 符号秩、Spearman 相关性)、TF-IDF、特征工程、图算法(图编辑距离)</span></dd>
+      <dt><span class="en">Tools</span><span class="zh">工程工具</span></dt>
+      <dd>Linux, Git, LaTeX</dd>
+      <dt><span class="en">Languages</span><span class="zh">语言能力</span></dt>
+      <dd><span class="en">Chinese (native); English (fluent academic reading &amp; writing; CET-4, CET-6)</span><span class="zh">中文(母语);英文(学术读写流利;CET-4、CET-6)</span></dd>
     </dl>
 
-    <h2>Honors &amp; Awards</h2>
-    <ul>
+    <h2><span class="en">Honors &amp; Awards</span><span class="zh">荣誉奖项</span></h2>
+    <ul class="en">
       <li>Provincial Second Prize, Chinese Mathematics Competition for College Students</li>
       <li>Outstanding Graduate Award, Guangdong University of Foreign Studies</li>
       <li>University Comprehensive Scholarship (multiple times)</li>
       <li>"Merit Student" and "Outstanding Class Cadre" honors (multiple times)</li>
     </ul>
+    <ul class="zh">
+      <li>全国大学生数学竞赛 省级二等奖</li>
+      <li>广东外语外贸大学 优秀毕业生</li>
+      <li>大学综合奖学金(多次)</li>
+      <li>校级"三好学生"、"优秀班干部"等荣誉称号(多次)</li>
+    </ul>
 
-    <h2>Selected Coursework</h2>
-    <p>
+    <h2><span class="en">Selected Coursework</span><span class="zh">相关课程</span></h2>
+    <p class="en">
       <strong>Graduate (UM):</strong> Applied Natural Language Processing · Deep Learning · Practical Machine Learning · Principles of Artificial Intelligence<br/>
       <strong>Undergraduate:</strong> Algorithm Design · C++ Programming · Natural Language Processing · Big Data Processing
     </p>
+    <p class="zh">
+      <strong>研究生(澳大):</strong> 应用自然语言处理 · 深度学习 · 实用机器学习 · 人工智能原理<br/>
+      <strong>本科:</strong> 算法设计 · C++ 程序设计 · 自然语言处理 · 大数据处理技术
+    </p>
 
-    <h2>References</h2>
-    <p>Available upon request.</p>
+    <h2><span class="en">References</span><span class="zh">推荐人</span></h2>
+    <p><span class="en">Available upon request.</span><span class="zh">可应要求提供。</span></p>
 
   </div>
+
+  <script>
+    // Share the same language choice as the homepage (localStorage key "site-lang").
+    (function(){
+      var KEY="site-lang", body=document.body;
+      function apply(l){
+        body.classList.remove("lang-en","lang-zh");
+        body.classList.add(l==="zh"?"lang-zh":"lang-en");
+        document.documentElement.lang = l==="zh"?"zh":"en";
+      }
+      var saved=null; try{saved=localStorage.getItem(KEY);}catch(e){}
+      apply(saved || (navigator.language && navigator.language.indexOf("zh")===0 ? "zh":"en"));
+      document.getElementById("lang-btn").addEventListener("click",function(){
+        var next = body.classList.contains("lang-zh")?"en":"zh";
+        apply(next); try{localStorage.setItem(KEY,next);}catch(e){}
+      });
+    })();
+  </script>
 </body>
 </html>
