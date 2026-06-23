@@ -1,5 +1,8 @@
 # Yuting Zhong · 个人学术主页
 
+> 👉 **主页 / Homepage: https://zyt2312.github.io** — Yuting Zhong (yutingzhong, 钟玉婷),
+> MSc student in Data Science, University of Macau.
+
 钟玉婷的个人主页源码 —— 一个单页、双语(EN / 中)、纯 HTML + CSS 的静态站点。
 线上地址:**https://zyt2312.github.io**
 
