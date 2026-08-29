@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuting Zhong 钟玉婷 — Resume</title>
+  <meta name="description" content="Resume of Yuting Zhong, an M.S. student in Data Science at the University of Macau researching LLM evaluation and reward models." />
+  <style>
+    :root {
+      --ink: #171717;
+      --muted: #555;
+      --rule: #b9b9b9;
+      --paper: #fff;
+      --accent: #1f5c3a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #ececea;
+      color: var(--ink);
+      font-family: Arial, "Helvetica Neue", "Noto Sans SC", sans-serif;
+      font-size: 12px;
+      line-height: 1.38;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.lang-en .zh { display: none !important; }
+    body.lang-zh .en { display: none !important; }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); text-decoration: underline; }
+
+    .toolbar {
+      width: min(8.5in, calc(100% - 24px));
+      margin: 14px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .toolbar button {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      padding: 7px 12px;
+    }
+
+    #print-btn { background: var(--ink); border-color: var(--ink); color: #fff; }
+    #lang-btn .sep { margin: 0 5px; color: #aaa; }
+    body.lang-en #lang-btn .opt-en,
+    body.lang-zh #lang-btn .opt-zh { color: var(--accent); font-weight: 700; }
+
+    .resume {
+      width: min(8.5in, calc(100% - 24px));
+      min-height: 11in;
+      margin: 12px auto 28px;
+      padding: .42in .58in;
+      background: var(--paper);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .12);
+    }
+
+    header { text-align: center; margin-bottom: 12px; }
+    h1 { margin: 0 0 4px; font-size: 25px; line-height: 1.1; letter-spacing: .2px; }
+    h1 .cn { margin-left: 7px; font-size: 17px; font-weight: 500; }
+    .contact { color: #333; font-size: 11px; }
+    .contact > span + span::before { content: " | "; color: #888; }
+
+    section { margin-top: 12px; }
+    h2 {
+      margin: 0 0 6px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--ink);
+      font-size: 13px;
+      line-height: 1.2;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+    }
+
+    p { margin: 3px 0; }
+    ul { margin: 3px 0 7px; padding-left: 17px; }
+    li { margin: 2px 0; }
+    .item { margin: 6px 0 8px; break-inside: avoid; }
+    .item-head { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; }
+    .item-title { font-weight: 700; }
+    .date { flex: 0 0 auto; font-size: 11px; white-space: nowrap; }
+    .subhead { display: flex; justify-content: space-between; gap: 16px; color: var(--muted); font-style: italic; }
+    .location { flex: 0 0 auto; white-space: nowrap; }
+    .tech { margin-top: 2px; color: #333; font-size: 11px; }
+    .pub-list { margin: 0; padding-left: 20px; }
+    .pub-list li { margin: 5px 0; padding-left: 2px; }
+    .pub-title { font-weight: 700; }
+    .venue { font-style: italic; }
+    .compact-grid { display: grid; grid-template-columns: max-content 1fr; gap: 2px 10px; }
+    .compact-grid dt { font-weight: 700; }
+    .compact-grid dd { margin: 0; }
+    .note { color: var(--muted); font-size: 10.5px; }
+
+    @media (max-width: 620px) {
+      body { font-size: 11.5px; }
+      .resume { width: 100%; margin: 10px 0 0; padding: 24px 18px; box-shadow: none; }
+      .toolbar { width: calc(100% - 24px); }
+      .item-head, .subhead { display: block; }
+      .date, .location { display: block; margin-top: 1px; white-space: normal; }
+      .contact > span { display: block; }
+      .contact > span + span::before { content: none; }
+      .compact-grid { grid-template-columns: 1fr; gap: 0; }
+      .compact-grid dd { margin-bottom: 4px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 10.3px; line-height: 1.28; }
+      .toolbar { display: none; }
+      .resume {
+        width: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+      section { margin-top: 9px; }
+      h1 { font-size: 22px; }
+      h2 { font-size: 11.5px; margin-bottom: 4px; }
+      .item { margin: 4px 0 6px; }
+      ul { margin: 2px 0 5px; }
+      li { margin: 1px 0; }
+      a { color: var(--ink); text-decoration: none; }
+      @page { size: A4; margin: 11mm 13mm; }
+    }
+  </style>
+</head>
+<body class="lang-en">
+  <div class="toolbar">
+    <button id="lang-btn" type="button" aria-label="Switch language">
+      <span class="opt opt-en">EN</span><span class="sep">/</span><span class="opt opt-zh">中</span>
+    </button>
+    <button id="print-btn" type="button" onclick="window.print()">
+      <span class="en">Print / Save as PDF</span><span class="zh">打印 / 另存为 PDF</span>
+    </button>
+  </div>
+
+  <main class="resume">
+    <header>
+      <h1>Yuting Zhong <span class="cn">钟玉婷</span></h1>
+      <div class="contact">
+        <span><a href="mailto:mc56403@um.edu.mo">mc56403@um.edu.mo</a></span>
+        <span><a href="https://zyt2312.github.io/">zyt2312.github.io</a></span>
+        <span><a href="https://github.com/zyt2312">github.com/zyt2312</a></span>
+        <span><span class="en">Macau SAR, China</span><span class="zh">中国澳门</span></span>
+      </div>
+    </header>
+
+    <section>
+      <h2><span class="en">Education</span><span class="zh">教育背景</span></h2>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title"><span class="en">University of Macau</span><span class="zh">澳门大学</span></span>
+          <span class="date">2025.08 – 2027.07 <span class="en">(expected)</span><span class="zh">(预计)</span></span>
+        </div>
+        <div class="subhead">
+          <span><span class="en">M.S. in Data Science (Artificial Intelligence)</span><span class="zh">数据科学理学硕士(人工智能应用方向)</span></span>
+          <span class="location"><span class="en">Macau SAR, China</span><span class="zh">中国澳门</span></span>
+        </div>
+        <ul>
+          <li><strong>GPA:</strong> 3.62/4.0 · <strong><span class="en">Advisor:</span><span class="zh">导师:</span></strong> <a href="https://www.fst.um.edu.mo/personal/derek-wong/">Prof. Derek F. Wong</a></li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title"><span class="en">Guangdong University of Foreign Studies</span><span class="zh">广东外语外贸大学</span></span>
+          <span class="date">2021.09 – 2025.06</span>
+        </div>
+        <div class="subhead">
+          <span><span class="en">B.Eng. in Computer Science and Technology</span><span class="zh">计算机科学与技术工学学士</span></span>
+          <span class="location"><span class="en">Guangzhou, China</span><span class="zh">中国广州</span></span>
+        </div>
+        <ul>
+          <li><strong>GPA:</strong> 3.75/4.0 · <span class="en">Outstanding Graduate and Honours Degree</span><span class="zh">优秀毕业生、荣誉学位</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="en">Research Interests</span><span class="zh">研究兴趣</span></h2>
+      <p class="en">Large Language Model Evaluation, LLM-as-a-Judge, Reward Modeling, Rubric-Based and Reference-Free Evaluation, LLM Agents, Reinforcement Learning, and Trustworthy NLP.</p>
+      <p class="zh">大语言模型评测、LLM-as-a-Judge、奖励模型、基于评分细则与无参考评测、大语言模型智能体、强化学习及可信自然语言处理。</p>
+    </section>
+
+    <section>
+      <h2><span class="en">Experience</span><span class="zh">科研经历</span></h2>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title"><span class="en">Research Member</span><span class="zh">科研成员</span></span>
+          <span class="date">2025 – <span class="en">Present</span><span class="zh">至今</span></span>
+        </div>
+        <div class="subhead">
+          <span><a href="http://nlp2ct.cis.um.edu.mo/">NLP²CT Laboratory · University of Macau</a></span>
+          <span class="location"><span class="en">Macau SAR, China</span><span class="zh">中国澳门</span></span>
+        </div>
+        <ul class="en">
+          <li>Conduct research on reliable evaluation for large language models, focusing on reward models, LLM-as-a-judge, and long-form deep-research reports.</li>
+          <li>Contribute to benchmark design, dataset construction, large-scale model evaluation, statistical analysis, and manuscript writing.</li>
+          <li>Co-first-authored two 2026 papers, including one accepted to <strong>Findings of EMNLP 2026</strong>.</li>
+        </ul>
+        <ul class="zh">
+          <li>围绕大语言模型可靠评测开展研究,重点关注奖励模型、LLM-as-a-Judge 与长篇深度研究报告。</li>
+          <li>参与基准设计、数据集构建、大规模模型评测、统计分析及论文写作。</li>
+          <li>以共同第一作者身份完成两篇 2026 年论文,其中一篇被 <strong>EMNLP 2026 Findings</strong> 接收。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="en">Projects</span><span class="zh">项目经历</span></h2>
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title">DeepResearch RewardBench: Reward-Model Benchmark for Deep-Research Reports</span>
+          <span class="date">2025 – 2026</span>
+        </div>
+        <p class="tech"><strong><span class="en">Tech Stack:</span><span class="zh">技术栈:</span></strong> Python, PyTorch, vLLM, Hugging Face Transformers</p>
+        <ul class="en">
+          <li>Built the first reward-model benchmark for long-form deep-research reports, addressing a gap in existing LLM evaluation.</li>
+          <li>Designed an end-to-end data pipeline spanning <strong>19 agent/LLM families</strong>; combined automatic filtering with PhD-level human verification to construct pair, triplet, and quadruplet preference data comprising <strong>331 tasks and 866 reports</strong>.</li>
+          <li>Evaluated <strong>17 models from 7B to 235B</strong> with Best-of-N selection and full-ranking consistency metrics; analyzed URL robustness, input-order bias, and comparative versus pointwise scoring.</li>
+          <li>Developed a four-category judge-error taxonomy and a few-shot classifier reaching <strong>~87% agreement</strong> with human annotation.</li>
+        </ul>
+        <ul class="zh">
+          <li>构建首个面向长篇深度研究报告的奖励模型评测基准,填补现有大语言模型评测在该场景的空白。</li>
+          <li>设计覆盖 <strong>19 个智能体/大模型家族</strong>的端到端数据流水线,结合自动过滤与博士级人工校验,构建包含 <strong>331 项任务、866 份报告</strong>的 pair、triplet 与 quadruplet 偏好数据。</li>
+          <li>基于 Best-of-N 选择与全排序一致性指标评测 <strong>17 个 7B–235B 模型</strong>,并分析 URL 鲁棒性、输入顺序偏差及对比式与打分式范式。</li>
+          <li>构建四类裁判错误体系及 few-shot 自动分类器,与人工标注一致率<strong>约 87%</strong>。</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title">CultMetric: Cultural-Fidelity Evaluation for Classical Chinese Translation</span>
+          <span class="date">2026</span>
+        </div>
+        <p class="tech"><strong><span class="en">Tech Stack:</span><span class="zh">技术栈:</span></strong> Python, PyTorch, Hugging Face Transformers, SciPy</p>
+        <ul class="en">
+          <li>Proposed a human-free neuro-symbolic evaluation framework grounded in <strong>872 culture-specific items</strong>, with five interpretable pillars aggregated into deterministic and reproducible scores.</li>
+          <li>Evaluated four machine-translation systems on the first five chapters of <em>Journey to the West</em>, totaling 1,598 segments per system.</li>
+          <li>Validated discriminative power and independence with Wilcoxon and Spearman tests: system-level ranking matched expert judgement exactly, while correlation with five mainstream metrics remained low (|ρ| &lt; 0.15).</li>
+        </ul>
+        <ul class="zh">
+          <li>提出以 <strong>872 条文化专有项</strong>为知识底座的无人工神经符号评测框架,通过五项可解释指标生成确定且可复现的评分。</li>
+          <li>在《西游记》前五回上评测四个机器翻译系统,每个系统包含 1,598 个句段。</li>
+          <li>通过 Wilcoxon 与 Spearman 检验验证判别力和独立性:系统级排序与专家完全一致,与五个主流指标的相关性保持较低(|ρ| &lt; 0.15)。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="en">Publications</span><span class="zh">论文成果</span></h2>
+      <p class="note"><span class="en">* denotes equal contribution.</span><span class="zh">* 表示同等贡献。</span></p>
+      <ol class="pub-list">
+        <li>
+          Shudong Liu*, <strong>Yuting Zhong*</strong>, Guanhua Chen, Xinyi Yang, Junnan Liu, Lidia S. Chao, Jiaheng Liu, and Derek F. Wong. (2026).
+          <span class="pub-title">DeepResearch RewardBench: Evaluating Reward Models for Deep Research Reports.</span>
+          <span class="venue">Findings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026).</span>
+        </li>
+        <li>
+          Bhaskar Ganesh Devalla*, <strong>Yuting Zhong*</strong>, Dejing Zhou, Junchao Wu, Shudong Liu, Lidia S. Chao, and Derek F. Wong. (2026).
+          <span class="pub-title">CultMetric: A Gloss-Grounded Multi-Pillar Framework for Human-Free Cultural Fidelity Evaluation in Classical Chinese Translation.</span>
+          <span class="venue">Manuscript submitted to ACL Rolling Review (ARR).</span>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2><span class="en">Honors &amp; Awards</span><span class="zh">荣誉奖项</span></h2>
+      <ul class="en">
+        <li>Provincial Second Prize, Chinese Mathematics Competition for College Students.</li>
+        <li>Outstanding Graduate Award and Honours Degree, Guangdong University of Foreign Studies.</li>
+        <li>University Comprehensive Scholarship; “Merit Student” and “Outstanding Class Cadre” honors (multiple times).</li>
+      </ul>
+      <ul class="zh">
+        <li>全国大学生数学竞赛省级二等奖。</li>
+        <li>广东外语外贸大学优秀毕业生、荣誉学位。</li>
+        <li>大学综合奖学金、校级“三好学生”与“优秀班干部”等荣誉(多次)。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="en">Relevant Coursework</span><span class="zh">相关课程</span></h2>
+      <p class="en"><strong>Graduate:</strong> Applied Natural Language Processing, Deep Learning, Practical Machine Learning, Principles of Artificial Intelligence.</p>
+      <p class="zh"><strong>研究生:</strong> 应用自然语言处理、深度学习、实用机器学习、人工智能原理。</p>
+      <p class="en"><strong>Undergraduate:</strong> Algorithm Design, C++ Programming, Natural Language Processing, Big Data Processing.</p>
+      <p class="zh"><strong>本科:</strong> 算法设计、C++ 程序设计、自然语言处理、大数据处理技术。</p>
+    </section>
+
+    <section>
+      <h2><span class="en">Languages</span><span class="zh">语言能力</span></h2>
+      <p><span class="en"><strong>Chinese:</strong> Native · <strong>English:</strong> Fluent academic reading and writing (CET-4, CET-6)</span><span class="zh"><strong>中文:</strong> 母语 · <strong>英文:</strong> 学术读写流利(CET-4、CET-6)</span></p>
+    </section>
+
+    <section>
+      <h2><span class="en">Technical Skills</span><span class="zh">专业技能</span></h2>
+      <dl class="compact-grid">
+        <dt><span class="en">Programming</span><span class="zh">编程语言</span></dt>
+        <dd>Python, C/C++</dd>
+        <dt><span class="en">ML &amp; LLM Frameworks</span><span class="zh">机器学习与大模型框架</span></dt>
+        <dd>PyTorch, TensorFlow, Hugging Face Transformers, vLLM</dd>
+        <dt><span class="en">Evaluation &amp; Analysis</span><span class="zh">评测与分析</span></dt>
+        <dd>LLM-as-a-Judge, Reward Models, Prompt/Few-shot Methods, Wilcoxon, Spearman, TF-IDF</dd>
+        <dt><span class="en">Developer Tools</span><span class="zh">开发工具</span></dt>
+        <dd>Linux, Git, LaTeX</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2><span class="en">References</span><span class="zh">推荐人</span></h2>
+      <p><span class="en">Available upon request.</span><span class="zh">可应要求提供。</span></p>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var KEY = "site-lang";
+      var body = document.body;
+
+      function apply(lang) {
+        body.classList.remove("lang-en", "lang-zh");
+        body.classList.add(lang === "zh" ? "lang-zh" : "lang-en");
+        document.documentElement.lang = lang === "zh" ? "zh" : "en";
+      }
+
+      var saved = null;
+      try { saved = localStorage.getItem(KEY); } catch (e) {}
+      apply(saved || (navigator.language && navigator.language.indexOf("zh") === 0 ? "zh" : "en"));
+
+      document.getElementById("lang-btn").addEventListener("click", function () {
+        var next = body.classList.contains("lang-zh") ? "en" : "zh";
+        apply(next);
+        try { localStorage.setItem(KEY, next); } catch (e) {}
+      });
+    })();
+  </script>
+</body>
+</html>
