@@ -3,6 +3,7 @@ information.txt
 
 # Old job-application CV (contains phone, etc.) — never publish
 *.pdf
+!assets/deepresearch-rewardbench-emnlp2026.pdf
 cv_original.pdf
 
 # Photos not used on the page (keep local, not public)
