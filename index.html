@@ -42,7 +42,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=20260829-2" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>" />
 </head>
 <body class="lang-en">
@@ -73,7 +73,7 @@
           <a href="https://www.um.edu.mo/"><span class="en">University of Macau</span><span class="zh">澳门大学</span></a>
         </p>
         <p class="role-line italic">
-          <span class="en">Member, <a href="http://nlp2ct.cis.um.edu.mo/">NLP<sup>2</sup>CT Laboratory</a></span><span class="zh">成员,<a href="http://nlp2ct.cis.um.edu.mo/">NLP<sup>2</sup>CT 实验室</a></span>
+          <span class="en">Research Assistant, <a href="http://nlp2ct.cis.um.edu.mo/">NLP<sup>2</sup>CT Laboratory</a></span><span class="zh">研究助理,<a href="http://nlp2ct.cis.um.edu.mo/">NLP<sup>2</sup>CT 实验室</a></span>
         </p>
       </div>
 
@@ -175,30 +175,61 @@
             <span class="en">Submitted <em>CultMetric</em>, a gloss-grounded cultural-fidelity evaluation framework for machine translation, to <strong>ACL</strong>.</span>
             <span class="zh">向 <strong>ACL</strong> 投稿 <em>CultMetric</em> —— 面向机器翻译的、基于注释的文化忠实度评测框架。</span>
           </li>
+          <li>
+            <span class="date">2026-05</span>
+            <span class="en">Submitted <em>DeepResearch RewardBench: Evaluating Reward Models for Deep Research Reports</em> to <strong>EMNLP</strong>.</span>
+            <span class="zh">向 <strong>EMNLP</strong> 投稿 <em>DeepResearch RewardBench</em> —— 面向深度研究报告的奖励模型评测基准。</span>
+          </li>
+          <li>
+            <span class="date">2025-08</span>
+            <span class="en">Started the M.S. program in Data Science (Artificial Intelligence) at the <strong>University of Macau</strong> and joined the NLP<sup>2</sup>CT Lab.</span>
+            <span class="zh">开始在<strong>澳门大学</strong>攻读数据科学(人工智能应用方向)硕士学位,并加入 NLP<sup>2</sup>CT 实验室。</span>
+          </li>
+          <li class="news-extra">
+            <span class="date">2025-07</span>
+            <span class="en">Graduated from <strong>Guangdong University of Foreign Studies</strong> with an Honours Degree and the Outstanding Graduate Award.</span>
+            <span class="zh">毕业于<strong>广东外语外贸大学</strong>,获荣誉学位及优秀毕业生称号。</span>
+          </li>
         </ul>
+        <button class="news-toggle" id="news-toggle" type="button" aria-expanded="false">
+          <span class="en label-more">Show more news ↓</span><span class="zh label-more">展开更多动态 ↓</span>
+          <span class="en label-less">Show less ↑</span><span class="zh label-less">收起动态 ↑</span>
+        </button>
       </section>
 
       <!-- 04 EDUCATION -->
       <section id="education">
         <h2><span class="num">§&nbsp;04</span><span class="en">Education</span><span class="zh">教育经历</span><span class="tag"><span class="en">DEGREES</span><span class="zh">学位</span></span></h2>
-        <div class="entry">
-          <div class="entry-head">
-            <strong><a href="https://www.um.edu.mo/"><span class="en">University of Macau</span><span class="zh">澳门大学</span></a></strong>
-            <span class="date">2025.08 – 2027.07</span>
+        <div class="entry edu-entry">
+          <div class="edu-logo-frame">
+            <img class="edu-logo" src="assets/um-logo.svg" alt="University of Macau logo" />
           </div>
-          <div class="entry-sub">
-            <span class="en">M.S. in Data Science (Artificial Intelligence) · GPA 3.62/4.0 · Advisor: <a href="https://www.fst.um.edu.mo/personal/derek-wong/">Prof. Derek F. Wong</a></span>
-            <span class="zh">数据科学理学硕士(人工智能应用方向)· GPA 3.62/4.0 · 导师:<a href="https://www.fst.um.edu.mo/personal/derek-wong/">Derek F. Wong 教授</a></span>
+          <div class="edu-body">
+            <div class="entry-head">
+              <strong><a href="https://www.um.edu.mo/"><span class="en">University of Macau</span><span class="zh">澳门大学</span></a></strong>
+              <span class="date">2025.08 – 2027.07</span>
+            </div>
+            <div class="entry-sub">
+              <span class="en">M.S. in Data Science (Artificial Intelligence) · Macau SAR, China</span>
+              <span class="zh">数据科学理学硕士(人工智能应用方向)· 中国澳门</span>
+            </div>
+            <p class="edu-meta"><strong>GPA:</strong> 3.62/4.0 · <strong><span class="en">Advisor:</span><span class="zh">导师:</span></strong> <a href="https://www.fst.um.edu.mo/personal/derek-wong/">Prof. Derek F. Wong</a></p>
           </div>
         </div>
-        <div class="entry">
-          <div class="entry-head">
-            <strong><a href="https://www.gdufs.edu.cn/"><span class="en">Guangdong University of Foreign Studies</span><span class="zh">广东外语外贸大学</span></a></strong>
-            <span class="date">2021.09 – 2025.07</span>
+        <div class="entry edu-entry">
+          <div class="edu-logo-frame">
+            <img class="edu-logo edu-logo-gdufs" src="assets/gdufs-logo.jpg" alt="Guangdong University of Foreign Studies logo" />
           </div>
-          <div class="entry-sub">
-            <span class="en">B.Eng. in Computer Science and Technology · GPA 3.75/4.0 · Outstanding Graduate &amp; Honours Degree</span>
-            <span class="zh">计算机科学与技术工学学士 · GPA 3.75/4.0 · 优秀毕业生 + 荣誉学位</span>
+          <div class="edu-body">
+            <div class="entry-head">
+              <strong><a href="https://www.gdufs.edu.cn/"><span class="en">Guangdong University of Foreign Studies</span><span class="zh">广东外语外贸大学</span></a></strong>
+              <span class="date">2021.09 – 2025.07</span>
+            </div>
+            <div class="entry-sub">
+              <span class="en">B.Eng. in Computer Science and Technology · Guangzhou, China</span>
+              <span class="zh">计算机科学与技术工学学士 · 中国广州</span>
+            </div>
+            <p class="edu-meta"><strong>GPA:</strong> 3.75/4.0 · <span class="en">Outstanding Graduate &amp; Honours Degree</span><span class="zh">优秀毕业生、荣誉学位</span></p>
           </div>
         </div>
       </section>
@@ -209,8 +240,8 @@
         <div class="entry">
           <div class="entry-head">
             <strong>
-              <span class="en">Member — NLP<sup>2</sup>CT Lab, University of Macau</span>
-              <span class="zh">成员 —— NLP<sup>2</sup>CT 实验室,澳门大学</span>
+              <span class="en">Research Assistant — NLP<sup>2</sup>CT Lab, University of Macau</span>
+              <span class="zh">研究助理 —— NLP<sup>2</sup>CT 实验室,澳门大学</span>
             </strong>
             <span class="date">2025 – Present</span>
           </div>
@@ -252,18 +283,34 @@
       <section id="publications">
         <h2><span class="num">§&nbsp;07</span><span class="en">Publications</span><span class="zh">论文</span><span class="tag"><span class="en">PAPERS</span><span class="zh">发表</span></span></h2>
         <p class="muted"><span class="en">* denotes equal contribution / co-first authorship.</span><span class="zh">* 表示同等贡献 / 共同第一作者。</span></p>
-        <ol class="pubs">
-          <li>
-            <span class="venue-tag"><span class="en">In Submission · ACL ARR 2026</span><span class="zh">投稿中 · ACL ARR 2026</span></span>
-            <span class="title">CultMetric: Gloss-Grounded Cultural Fidelity Evaluation for Machine Translation</span>
-            <span class="authors">Bhaskar Ganesh Devalla*, <strong>Yuting Zhong*</strong>, Dejing Zhou, Junchao Wu, Shudong Liu, Lidia S. Chao, and Derek F. Wong. (2026).</span>
-            <span class="venue">Manuscript submitted to ACL Rolling Review (ARR).</span>
+        <ol class="pubs pub-cards">
+          <li class="pub-card">
+            <a class="pub-figure" href="assets/deepresearch-rewardbench-framework.svg" target="_blank" rel="noopener" aria-label="Open the DeepResearch RewardBench framework figure">
+              <img src="assets/deepresearch-rewardbench-framework.svg" alt="DeepResearch RewardBench framework diagram" />
+            </a>
+            <div class="pub-body">
+              <div class="pub-meta">
+                <span class="venue-tag"><span class="en">Findings of EMNLP 2026</span><span class="zh">EMNLP 2026 Findings</span></span>
+                <span class="pub-year">2026</span>
+              </div>
+              <span class="title">DeepResearch RewardBench: Evaluating Reward Models for Deep Research Reports</span>
+              <span class="authors">Shudong Liu*, <strong>Yuting Zhong*</strong>, Guanhua Chen, Xinyi Yang, Junnan Liu, Lidia S. Chao, Jiaheng Liu, and Derek F. Wong.</span>
+              <span class="venue"><span class="en">To appear in Findings of EMNLP 2026.</span><span class="zh">将发表于 EMNLP 2026 Findings。</span></span>
+            </div>
           </li>
-          <li>
-            <span class="venue-tag"><span class="en">Findings of EMNLP 2026</span><span class="zh">EMNLP 2026 Findings</span></span>
-            <span class="title">DeepResearch RewardBench: Evaluating Reward Models for Deep Research Reports</span>
-            <span class="authors">Shudong Liu*, <strong>Yuting Zhong*</strong>, Guanhua Chen, Xinyi Yang, Junnan Liu, Lidia S. Chao, Jiaheng Liu, and Derek F. Wong. (2026).</span>
-            <span class="venue">Accepted to Findings of EMNLP 2026.</span>
+          <li class="pub-card">
+            <a class="pub-figure" href="assets/cultmetric-framework.svg" target="_blank" rel="noopener" aria-label="Open the CultMetric framework figure">
+              <img src="assets/cultmetric-framework.svg" alt="CultMetric framework diagram" />
+            </a>
+            <div class="pub-body">
+              <div class="pub-meta">
+                <span class="venue-tag"><span class="en">ACL Rolling Review · Submitted</span><span class="zh">ACL Rolling Review · 投稿中</span></span>
+                <span class="pub-year">2026</span>
+              </div>
+              <span class="title">CultMetric: Gloss-Grounded Cultural Fidelity Evaluation for Machine Translation</span>
+              <span class="authors">Bhaskar Ganesh Devalla*, <strong>Yuting Zhong*</strong>, Dejing Zhou, Junchao Wu, Shudong Liu, Lidia S. Chao, and Derek F. Wong.</span>
+              <span class="venue"><span class="en">Manuscript submitted to ACL Rolling Review (ARR).</span><span class="zh">论文已投稿至 ACL Rolling Review (ARR)。</span></span>
+            </div>
           </li>
         </ol>
       </section>
@@ -328,6 +375,6 @@
     </div><!-- /.content -->
   </main>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20260829-2"></script>
 </body>
 </html>

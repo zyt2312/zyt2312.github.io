@@ -140,6 +140,16 @@ section p { margin: .6rem 0; }
 /* ---------- news ---------- */
 .news { list-style: none; padding: 0; margin: 0; }
 .news li { padding: .4rem 0; border-bottom: 1px dotted var(--rule); }
+.news:not(.is-expanded) .news-extra { display: none; }
+.news-toggle {
+  margin-top: .75rem; padding: .32rem 0;
+  border: 0; border-bottom: 1px solid transparent; background: transparent;
+  color: var(--accent); cursor: pointer; font: inherit; font-size: .82rem;
+}
+.news-toggle:hover { border-bottom-color: var(--accent); }
+.news-toggle .label-less { display: none; }
+.news-toggle[aria-expanded="true"] .label-more { display: none !important; }
+.news-toggle[aria-expanded="true"] .label-less { display: inline; }
 .date { color: var(--muted); font-size: .85rem; font-variant-numeric: tabular-nums; margin-right: .5rem; }
 
 /* ---------- entries ---------- */
@@ -149,6 +159,24 @@ section p { margin: .6rem 0; }
 .entry ul { margin: .5rem 0 0; padding-left: 1.2rem; }
 .entry ul li { margin: .25rem 0; }
 .stack { font-size: .85rem; color: var(--muted); font-style: italic; }
+
+/* ---------- education ---------- */
+.edu-entry {
+  display: grid; grid-template-columns: 62px 1fr; gap: 1rem; align-items: start;
+  padding: .2rem 0 .7rem;
+}
+.edu-logo-frame {
+  position: relative; width: 58px; height: 58px; overflow: hidden;
+  border: 1px solid var(--rule); border-radius: 8px; background: #fff;
+  display: flex; align-items: center; justify-content: center;
+}
+.edu-logo { display: block; width: 52px; height: 52px; object-fit: contain; }
+.edu-logo-gdufs {
+  position: absolute; top: 0; left: 50%; width: 190px; max-width: none; height: auto;
+  transform: translateX(-50%);
+}
+.edu-body { min-width: 0; }
+.edu-meta { margin: .35rem 0 0; color: var(--muted); font-size: .86rem; }
 
 /* ---------- publications ---------- */
 .pubs { padding-left: 1.3rem; }
@@ -161,6 +189,22 @@ section p { margin: .6rem 0; }
 .pubs .title { display: block; font-weight: 600; }
 .pubs .authors { display: block; font-size: .92rem; }
 .pubs .venue { display: block; color: var(--muted); font-size: .88rem; font-style: italic; }
+.pub-cards { list-style: none; padding: 0; }
+.pubs .pub-card {
+  display: grid; grid-template-columns: minmax(190px, 32%) 1fr;
+  gap: 1.15rem; margin: 1.25rem 0; padding: .85rem;
+  border: 1px solid var(--rule); border-radius: 6px; background: var(--card);
+}
+.pub-figure {
+  display: flex; min-height: 145px; overflow: hidden; align-items: center; justify-content: center;
+  border: 1px solid var(--rule); border-radius: 4px; background: #f7f8f6;
+}
+.pub-figure:hover { border-color: var(--accent); }
+.pub-figure img { display: block; width: 100%; height: 100%; max-height: 180px; object-fit: contain; }
+.pub-body { min-width: 0; align-self: center; }
+.pub-meta { display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start; }
+.pub-year { color: var(--muted); font-size: .78rem; font-variant-numeric: tabular-nums; }
+.pub-card .title { margin: .25rem 0 .35rem; line-height: 1.4; }
 
 /* ---------- skills ---------- */
 .skills { display: grid; grid-template-columns: max-content 1fr; gap: .4rem 1.2rem; margin: 0; }
@@ -198,4 +242,10 @@ footer { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--ru
   body { font-size: 16px; }
   .entry-head { flex-direction: column; }
   .tag { display: none; }
+  .edu-entry { grid-template-columns: 52px 1fr; gap: .75rem; }
+  .edu-logo-frame { width: 50px; height: 50px; }
+  .edu-logo { width: 45px; height: 45px; }
+  .edu-logo-gdufs { width: 165px; height: auto; }
+  .pubs .pub-card { grid-template-columns: 1fr; }
+  .pub-figure { min-height: 0; aspect-ratio: 16 / 9; }
 }

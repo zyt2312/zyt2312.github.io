@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">DeepResearch RewardBench framework</title>
+  <desc id="desc">Pipeline from deep-research report collection and preference-data construction to reward-model evaluation and judge-error analysis.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7faf8"/>
+      <stop offset="1" stop-color="#edf4ef"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2d6a4f"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#143f28" flood-opacity=".12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="700" rx="28" fill="url(#bg)"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#173c2a">DeepResearch RewardBench</text>
+  <text x="60" y="104" font-family="Arial, sans-serif" font-size="18" fill="#557064">Evaluating reward models for long-form deep-research reports</text>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="165" width="230" height="190" rx="18" fill="#fff" stroke="#b7d1c1" stroke-width="2"/>
+    <circle cx="95" cy="202" r="18" fill="#2d6a4f"/>
+    <text x="95" y="209" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">1</text>
+    <text x="125" y="210" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173c2a">Collect Reports</text>
+    <text x="85" y="258" font-family="Arial, sans-serif" font-size="18" fill="#334a3e">19 agent / LLM families</text>
+    <text x="85" y="291" font-family="Arial, sans-serif" font-size="18" fill="#334a3e">Long-form research outputs</text>
+    <text x="85" y="324" font-family="Arial, sans-serif" font-size="18" fill="#334a3e">Original protocol scores</text>
+
+    <rect x="345" y="165" width="230" height="190" rx="18" fill="#fff" stroke="#b7d1c1" stroke-width="2"/>
+    <circle cx="380" cy="202" r="18" fill="#2d6a4f"/>
+    <text x="380" y="209" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">2</text>
+    <text x="410" y="210" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173c2a">Curate</text>
+    <text x="370" y="252" font-family="Arial, sans-serif" font-size="17" fill="#334a3e">Score consistency</text>
+    <text x="370" y="282" font-family="Arial, sans-serif" font-size="17" fill="#334a3e">Length &amp; score-gap filters</text>
+    <text x="370" y="312" font-family="Arial, sans-serif" font-size="17" fill="#334a3e">Expert human verification</text>
+
+    <rect x="630" y="165" width="230" height="190" rx="18" fill="#fff" stroke="#b7d1c1" stroke-width="2"/>
+    <circle cx="665" cy="202" r="18" fill="#2d6a4f"/>
+    <text x="665" y="209" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">3</text>
+    <text x="695" y="210" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173c2a">Preference Data</text>
+    <text x="655" y="260" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#2d6a4f">331 tasks</text>
+    <text x="655" y="294" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#2d6a4f">866 reports</text>
+    <text x="655" y="327" font-family="Arial, sans-serif" font-size="17" fill="#334a3e">Pair · Triplet · Quadruplet</text>
+
+    <rect x="915" y="165" width="230" height="190" rx="18" fill="#fff" stroke="#b7d1c1" stroke-width="2"/>
+    <circle cx="950" cy="202" r="18" fill="#2d6a4f"/>
+    <text x="950" y="209" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">4</text>
+    <text x="980" y="210" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173c2a">Evaluate</text>
+    <text x="940" y="258" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#2d6a4f">17 reward models</text>
+    <text x="940" y="291" font-family="Arial, sans-serif" font-size="17" fill="#334a3e">7B–235B parameters</text>
+    <text x="940" y="324" font-family="Arial, sans-serif" font-size="17" fill="#334a3e">Best-of-N · Full ranking</text>
+  </g>
+
+  <path d="M290 260 H335" stroke="#2d6a4f" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M575 260 H620" stroke="#2d6a4f" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M860 260 H905" stroke="#2d6a4f" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="160" y="440" width="880" height="180" rx="20" fill="#173c2a"/>
+    <text x="200" y="490" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#fff">Reliability &amp; Judge-Error Analysis</text>
+    <rect x="200" y="520" width="185" height="58" rx="12" fill="#e8f2ec"/>
+    <text x="292" y="556" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#173c2a">Robustness &amp; Bias</text>
+    <rect x="405" y="520" width="185" height="58" rx="12" fill="#e8f2ec"/>
+    <text x="497" y="546" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#173c2a">Comparative vs.</text>
+    <text x="497" y="566" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#173c2a">Pointwise Scoring</text>
+    <rect x="610" y="520" width="185" height="58" rx="12" fill="#e8f2ec"/>
+    <text x="702" y="546" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#173c2a">Four-Category</text>
+    <text x="702" y="566" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#173c2a">Error Taxonomy</text>
+    <rect x="815" y="520" width="185" height="58" rx="12" fill="#d6eadc"/>
+    <text x="907" y="546" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#173c2a">~87% Human</text>
+    <text x="907" y="566" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#173c2a">Agreement</text>
+  </g>
+  <path d="M1030 355 V400 H600 V430" fill="none" stroke="#2d6a4f" stroke-width="4" marker-end="url(#arrow)"/>
+</svg>

@@ -24,4 +24,14 @@
       try { localStorage.setItem(KEY, next); } catch (e) {}
     });
   }
+
+  var news = document.querySelector(".news");
+  var newsToggle = document.getElementById("news-toggle");
+  if (news && newsToggle) {
+    newsToggle.addEventListener("click", function () {
+      var expanded = newsToggle.getAttribute("aria-expanded") === "true";
+      news.classList.toggle("is-expanded", !expanded);
+      newsToggle.setAttribute("aria-expanded", String(!expanded));
+    });
+  }
 })();
