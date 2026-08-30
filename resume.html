@@ -10,22 +10,15 @@
       --ink: #171717;
       --muted: #555;
       --rule: #b9b9b9;
-      --paper: #fffefb;
+      --paper: #fff;
       --accent: #1f5c3a;
-      --accent-blue: #49677f;
-      --accent-sand: #bd8d56;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      background-color: #e8eeeb;
-      background-image:
-        radial-gradient(circle at 12% 16%, rgba(73, 103, 127, .2), transparent 27%),
-        radial-gradient(circle at 88% 84%, rgba(189, 141, 86, .18), transparent 25%),
-        repeating-linear-gradient(135deg, rgba(31, 92, 58, .035) 0 1px, transparent 1px 24px);
-      background-attachment: fixed;
+      background: #ececea;
       color: var(--ink);
       font-family: Arial, "Helvetica Neue", "Noto Sans SC", sans-serif;
       font-size: 12px;
@@ -48,17 +41,16 @@
     }
 
     .toolbar button {
-      border: 1px solid rgba(31, 92, 58, .22);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, .88);
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
       color: var(--muted);
       cursor: pointer;
       font: inherit;
       padding: 7px 12px;
-      box-shadow: 0 4px 16px rgba(31, 56, 44, .08);
     }
 
-    #print-btn { background: var(--accent); border-color: var(--accent); color: #fff; }
+    #print-btn { background: var(--ink); border-color: var(--ink); color: #fff; }
     #lang-btn .sep { margin: 0 5px; color: #aaa; }
     body.lang-en #lang-btn .opt-en,
     body.lang-zh #lang-btn .opt-zh { color: var(--accent); font-weight: 700; }
@@ -68,84 +60,25 @@
       min-height: 11in;
       margin: 12px auto 28px;
       padding: .42in .58in;
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      border: 1px solid rgba(31, 92, 58, .16);
-      border-radius: 14px;
-      background: linear-gradient(180deg, rgba(239, 247, 243, .72), var(--paper) 145px);
-      box-shadow: 0 24px 65px rgba(36, 59, 48, .18);
+      background: var(--paper);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .12);
     }
 
-    .resume::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: -52px;
-      right: -38px;
-      width: 245px;
-      height: 245px;
-      opacity: .6;
-      transform: rotate(9deg);
-      background-image: radial-gradient(circle, rgba(73, 103, 127, .38) 0 1.6px, transparent 1.9px);
-      background-size: 16px 16px;
-      -webkit-mask-image: radial-gradient(circle at center, #000 18%, transparent 70%);
-      mask-image: radial-gradient(circle at center, #000 18%, transparent 70%);
-    }
-
-    .resume::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      left: -118px;
-      bottom: -150px;
-      width: 250px;
-      height: 250px;
-      border: 24px solid rgba(189, 141, 86, .1);
-      border-radius: 50%;
-      box-shadow: 0 0 0 17px rgba(31, 92, 58, .055), 0 0 0 34px rgba(73, 103, 127, .04);
-    }
-
-    .resume > * { position: relative; z-index: 1; }
-
-    header {
-      margin-bottom: 14px;
-      padding: 12px 16px 13px;
-      border-left: 4px solid var(--accent);
-      border-radius: 0 8px 8px 0;
-      background: linear-gradient(90deg, rgba(31, 92, 58, .085), rgba(73, 103, 127, .035) 62%, transparent);
-      text-align: left;
-    }
-    h1 {
-      margin: 0 0 4px;
-      color: var(--accent);
-      font-family: Georgia, "Times New Roman", "Songti SC", serif;
-      font-size: 26px;
-      line-height: 1.1;
-      letter-spacing: .25px;
-    }
+    header { text-align: center; margin-bottom: 12px; }
+    h1 { margin: 0 0 4px; font-size: 25px; line-height: 1.1; letter-spacing: .2px; }
     h1 .cn { margin-left: 7px; font-size: 17px; font-weight: 500; }
     .contact { color: #333; font-size: 11px; }
     .contact > span + span::before { content: " | "; color: #888; }
 
     section { margin-top: 12px; }
     h2 {
-      display: flex;
-      align-items: center;
-      gap: 9px;
       margin: 0 0 6px;
-      padding-bottom: 1px;
-      color: var(--accent);
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--ink);
       font-size: 13px;
       line-height: 1.2;
       letter-spacing: .7px;
       text-transform: uppercase;
-    }
-    h2::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(90deg, rgba(31, 92, 58, .7), rgba(73, 103, 127, .18), transparent);
     }
 
     p { margin: 3px 0; }
@@ -169,12 +102,9 @@
 
     @media (max-width: 620px) {
       body { font-size: 11.5px; }
-      .resume { width: 100%; margin: 10px 0 0; padding: 24px 18px; border-radius: 0; box-shadow: none; overflow-wrap: anywhere; }
-      .toolbar { width: calc(100% - 24px); gap: 8px; }
-      .toolbar button { padding: 6px 10px; font-size: 10.5px; white-space: nowrap; }
-      header { padding-right: 12px; }
+      .resume { width: 100%; margin: 10px 0 0; padding: 24px 18px; box-shadow: none; }
+      .toolbar { width: calc(100% - 24px); }
       .item-head, .subhead { display: block; }
-      .item-head > *, .subhead > *, .compact-grid > *, .pub-list li { min-width: 0; overflow-wrap: anywhere; }
       .date, .location { display: block; margin-top: 1px; white-space: normal; }
       .contact > span { display: block; }
       .contact > span + span::before { content: none; }
@@ -190,16 +120,10 @@
         min-height: 0;
         margin: 0;
         padding: 0;
-        overflow: visible;
-        border: 0;
-        border-radius: 0;
-        background: #fff;
         box-shadow: none;
       }
-      .resume::before, .resume::after { display: none; }
-      header { padding: 0 0 7px; border: 0; border-bottom: 1px solid var(--rule); border-radius: 0; background: none; }
       section { margin-top: 9px; }
-      h1 { color: var(--ink); font-size: 22px; }
+      h1 { font-size: 22px; }
       h2 { font-size: 11.5px; margin-bottom: 4px; }
       .item { margin: 4px 0 6px; }
       ul { margin: 2px 0 5px; }

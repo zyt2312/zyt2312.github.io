@@ -10,8 +10,10 @@
   --accent:     #1f5c3a;   /* links, accents (deep green)  */
   --accent-dk:  #143f28;   /* darker green                 */
   --rule:       #e3e0da;   /* hairlines                    */
-  --bg:         #fbfaf7;   /* warm off-white page          */
-  --card:       #ffffff;   /* card background              */
+  --bg:         #f3f6f3;   /* cool botanical off-white     */
+  --card:       rgba(255, 255, 255, .84); /* translucent cards */
+  --mist:       #55798a;   /* blue-grey background accent  */
+  --sand:       #b98d59;   /* warm background accent       */
   --sidebar-w:  280px;     /* sidebar width                */
   --maxw:       1080px;    /* whole layout width           */
 }
@@ -21,9 +23,16 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 8% 3%, rgba(85, 121, 138, .15), transparent 32rem),
+    radial-gradient(ellipse at 94% 52%, rgba(185, 141, 89, .11), transparent 30rem),
+    radial-gradient(circle, rgba(31, 92, 58, .055) 0 .7px, transparent .8px);
+  background-size: auto, auto, 24px 24px;
+  background-attachment: fixed;
   color: var(--ink);
-  border-top: 4px solid var(--accent);   /* decorative accent line at the very top */
+  border-top: 4px solid var(--accent);
+  border-image: linear-gradient(90deg, var(--accent), var(--mist), var(--sand)) 1;
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
                "Songti SC", "STSong", serif;
   font-size: 18px;
@@ -40,7 +49,8 @@ body.lang-zh .en { display: none !important; }
 .langbar { position: fixed; top: 1rem; right: 1.25rem; z-index: 10; }
 #lang-toggle {
   font: inherit; font-size: .85rem; cursor: pointer;
-  background: var(--bg); border: 1px solid var(--rule); border-radius: 999px;
+  background: rgba(248, 250, 248, .88); border: 1px solid var(--rule); border-radius: 999px;
+  backdrop-filter: blur(8px);
   padding: .25rem .8rem; color: var(--muted); letter-spacing: .5px;
 }
 #lang-toggle:hover { border-color: var(--accent); color: var(--accent); }
@@ -76,6 +86,7 @@ a:hover { border-bottom-color: var(--accent); }
   object-fit: cover; object-position: center 22%;  /* lift crop so the face sits centred */
   border-radius: 4px; background: var(--rule);
   display: block; margin-bottom: 1.6rem;
+  box-shadow: 11px 11px 0 rgba(85, 121, 138, .08), -5px -5px 0 rgba(185, 141, 89, .07);
 }
 .sidebar .name { margin: 0; font-size: 1.7rem; font-weight: 600; line-height: 1.15; }
 .sidebar .name-cn { margin: .15rem 0 1rem; font-size: 1.1rem; color: var(--muted); }
@@ -254,6 +265,36 @@ section p { margin: .6rem 0; }
     radial-gradient(circle at 100% 0, rgba(31, 92, 58, .08), transparent 34%),
     var(--card);
 }
+.country-watch { margin-bottom: .95rem; }
+.country-watch-label,
+.live-visitors-label {
+  margin: 0 0 .5rem;
+  color: var(--muted);
+  font-size: .66rem;
+  letter-spacing: .75px;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+.country-chips {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .42rem;
+}
+.country-chip {
+  display: flex;
+  align-items: center;
+  gap: .38rem;
+  min-width: 0;
+  padding: .38rem .48rem;
+  border: 1px dashed rgba(85, 121, 138, .3);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .58);
+  color: var(--muted);
+  font-size: .67rem;
+  line-height: 1.2;
+}
+.country-flag { flex: 0 0 auto; font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif; font-size: .86rem; }
+.live-visitors-label { margin-top: .1rem; color: var(--accent); text-align: center; }
 .flag-counter { display: block; width: 100%; max-width: 392px; margin: 0 auto; border: 0; }
 .flag-counter:hover { border: 0; opacity: .9; }
 .visitors .flag-counter img { display: block; width: 100%; max-width: 392px; height: auto; }
@@ -289,4 +330,5 @@ footer { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--ru
   .content, .content section, .visitors { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
   .skills { grid-template-columns: 1fr; gap: .15rem; }
   .skills dd { margin-bottom: .45rem; overflow-wrap: anywhere; }
+  .country-chips { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

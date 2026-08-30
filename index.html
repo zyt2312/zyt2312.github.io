@@ -42,7 +42,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="css/style.css?v=20260830-2" />
+  <link rel="stylesheet" href="css/style.css?v=20260830-3" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>" />
 </head>
 <body class="lang-en">
@@ -364,18 +364,32 @@
         </p>
       </section>
 
-      <div class="visitors" aria-labelledby="visitors-label">
+      <div id="visitors" class="visitors" aria-labelledby="visitors-label">
         <div class="visitors-heading">
           <p id="visitors-label" class="visitors-label"><span class="en">Visitors</span><span class="zh">访客分布</span></p>
           <span class="visitors-kicker"><span class="en">Global reach</span><span class="zh">全球访问</span></span>
         </div>
         <div class="visitors-panel">
+          <div class="country-watch">
+            <p class="country-watch-label"><span class="en">Countries awaiting their first recorded visit</span><span class="zh">等待首次真实访问的国家</span></p>
+            <div class="country-chips" role="list" aria-label="Major countries awaiting their first recorded visit">
+              <span class="country-chip" role="listitem"><span class="country-flag" aria-hidden="true">🇨🇳</span><span class="en">China</span><span class="zh">中国</span></span>
+              <span class="country-chip" role="listitem"><span class="country-flag" aria-hidden="true">🇺🇸</span><span class="en">United States</span><span class="zh">美国</span></span>
+              <span class="country-chip" role="listitem"><span class="country-flag" aria-hidden="true">🇬🇧</span><span class="en">United Kingdom</span><span class="zh">英国</span></span>
+              <span class="country-chip" role="listitem"><span class="country-flag" aria-hidden="true">🇨🇦</span><span class="en">Canada</span><span class="zh">加拿大</span></span>
+              <span class="country-chip" role="listitem"><span class="country-flag" aria-hidden="true">🇦🇺</span><span class="en">Australia</span><span class="zh">澳大利亚</span></span>
+              <span class="country-chip" role="listitem"><span class="country-flag" aria-hidden="true">🇩🇪</span><span class="en">Germany</span><span class="zh">德国</span></span>
+              <span class="country-chip" role="listitem"><span class="country-flag" aria-hidden="true">🇫🇷</span><span class="en">France</span><span class="zh">法国</span></span>
+              <span class="country-chip" role="listitem"><span class="country-flag" aria-hidden="true">🇯🇵</span><span class="en">Japan</span><span class="zh">日本</span></span>
+            </div>
+          </div>
+          <p class="live-visitors-label"><span class="en">Live country counts</span><span class="zh">真实国家访问统计</span></p>
           <a class="flag-counter" href="https://info.flagcounter.com/5LBH" target="_blank" rel="noopener" aria-label="Open detailed visitor country statistics">
             <img src="https://s01.flagcounter.com/count2/5LBH/bg_FBFAF7/txt_2F332F/border_D8D5CE/columns_5/maxflags_15/viewers_3/labels_0/pageviews_0/flags_0/percent_0/" alt="Visitor countries and visitor counts by country" />
           </a>
           <p class="visitors-note">
-            <span class="en">Country and region are estimated from privacy-preserving IP geolocation. Click the counter for the full distribution.</span>
-            <span class="zh">国家和地区由隐私保护的 IP 地理定位估算；点击计数器可查看完整人数分布。</span>
+            <span class="en">Only genuine visits appear in the live counter. The country chips above are an awaiting-first-visit list, not recorded visits.</span>
+            <span class="zh">下方计数器仅显示真实访问；上方国家为“等待首次访问”列表，并非已有访问记录。</span>
           </p>
         </div>
       </div>
@@ -394,6 +408,6 @@
     </div><!-- /.content -->
   </main>
 
-  <script src="js/main.js?v=20260830-2"></script>
+  <script src="js/main.js?v=20260830-3"></script>
 </body>
 </html>
