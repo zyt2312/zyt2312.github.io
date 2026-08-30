@@ -10,8 +10,8 @@
   --accent:     #1f5c3a;   /* links, accents (deep green)  */
   --accent-dk:  #143f28;   /* darker green                 */
   --rule:       #e3e0da;   /* hairlines                    */
-  --bg:         #eaf0ed;   /* cool botanical canvas        */
-  --card:       rgba(255, 255, 255, .9); /* translucent cards  */
+  --bg:         #e9f0ed;   /* cool botanical canvas        */
+  --card:       rgba(255, 255, 255, .92); /* translucent cards */
   --mist:       #55798a;   /* blue-grey background accent  */
   --sand:       #b98d59;   /* warm background accent       */
   --sidebar-w:  280px;     /* sidebar width                */
@@ -25,9 +25,13 @@ body {
   margin: 0;
   background-color: var(--bg);
   background-image:
-    radial-gradient(ellipse at 5% 2%, rgba(85, 121, 138, .24), transparent 34rem),
-    radial-gradient(ellipse at 98% 48%, rgba(185, 141, 89, .18), transparent 32rem),
-    repeating-linear-gradient(135deg, rgba(31, 92, 58, .04) 0 1px, transparent 1px 30px);
+    radial-gradient(ellipse at 4% 3%, rgba(85, 121, 138, .27), transparent 32rem),
+    radial-gradient(ellipse at 98% 52%, rgba(185, 141, 89, .2), transparent 30rem),
+    linear-gradient(125deg, rgba(255, 255, 255, .2), rgba(225, 238, 232, .46)),
+    url("../assets/research-network-bg.svg");
+  background-position: left top, right center, center, center top;
+  background-size: auto, auto, auto, 1600px 1000px;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat-y;
   background-attachment: fixed;
   color: var(--ink);
   border-top: 4px solid var(--accent);
@@ -65,6 +69,7 @@ a:hover { border-bottom-color: var(--accent); }
    LAYOUT — sidebar + content
    ============================================================ */
 .layout {
+  position: relative;
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 3.5rem 1.5rem 5rem;
@@ -79,13 +84,20 @@ a:hover { border-bottom-color: var(--accent); }
   position: sticky;
   top: 3.5rem;
   text-align: left;
+  padding: 1.1rem;
+  border: 1px solid rgba(85, 121, 138, .2);
+  border-radius: 14px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, .9), rgba(246, 250, 247, .72));
+  box-shadow: 0 18px 50px rgba(39, 64, 53, .1);
+  backdrop-filter: blur(8px);
 }
 .sidebar .avatar {
   width: 100%; max-width: 220px; aspect-ratio: 1/1;
   object-fit: cover; object-position: center 22%;  /* lift crop so the face sits centred */
-  border-radius: 4px; background: var(--rule);
+  border-radius: 9px; background: var(--rule);
   display: block; margin-bottom: 1.6rem;
-  box-shadow: 11px 11px 0 rgba(85, 121, 138, .08), -5px -5px 0 rgba(185, 141, 89, .07);
+  box-shadow: 10px 10px 0 rgba(85, 121, 138, .09), -4px -4px 0 rgba(185, 141, 89, .08);
 }
 .sidebar .name { margin: 0; font-size: 1.7rem; font-weight: 600; line-height: 1.15; }
 .sidebar .name-cn { margin: .15rem 0 1rem; font-size: 1.1rem; color: var(--muted); }
@@ -117,13 +129,24 @@ a:hover { border-bottom-color: var(--accent); }
    CONTENT
    ============================================================ */
 .content {
+  position: relative;
   min-width: 0;
-  padding: 1.2rem 1.45rem 1.5rem;
-  border: 1px solid rgba(85, 121, 138, .14);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, .48);
-  box-shadow: 0 24px 70px rgba(39, 64, 53, .09);
-  backdrop-filter: blur(2px);
+  overflow: hidden;
+  padding: 1.35rem 1.65rem 1.65rem;
+  border: 1px solid rgba(85, 121, 138, .2);
+  border-radius: 16px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, .91), rgba(249, 251, 249, .78));
+  box-shadow: 0 28px 80px rgba(39, 64, 53, .11);
+  backdrop-filter: blur(9px);
+}
+.content::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--mist) 58%, var(--sand));
+  opacity: .88;
 }
 section { margin: 0 0 2.8rem; }
 section:first-child { margin-top: 0; }
@@ -138,7 +161,12 @@ section h2::after {  /* short accent underline like the reference */
   content: ""; position: absolute; left: 0; bottom: -1px;
   width: 56px; height: 2px; background: var(--accent);
 }
-.num { color: var(--accent); font-size: .8rem; letter-spacing: 1px; margin-right: .6rem; vertical-align: 2px; }
+.num {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 2.25rem; margin-right: .6rem; padding: .05rem .35rem;
+  border-radius: 999px; background: rgba(31, 92, 58, .09);
+  color: var(--accent); font-size: .72rem; letter-spacing: 1px; vertical-align: 2px;
+}
 .tag {
   float: right; font-size: .7rem; letter-spacing: 1.5px; color: var(--muted);
   text-transform: uppercase; font-weight: 400; margin-top: .35rem;
@@ -335,7 +363,11 @@ footer { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--ru
    RESPONSIVE — stack to one column on narrow screens
    ============================================================ */
 @media (max-width: 760px) {
-  .layout { grid-template-columns: 1fr; gap: 2rem; padding-top: 4rem; }
+  body {
+    background-size: auto, auto, auto, 1000px 625px;
+    background-attachment: scroll;
+  }
+  .layout { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 1rem 4rem; }
   .sidebar { position: static; text-align: center; }
   .sidebar .avatar { margin-left: auto; margin-right: auto; }
   .sidebar-contact { text-align: left; max-width: 320px; margin-left: auto; margin-right: auto; }
