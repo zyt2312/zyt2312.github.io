@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" fill="none">
+  <defs>
+    <pattern id="paper-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#526f9e" stroke-opacity=".045"/>
+      <circle cx="1" cy="1" r="1" fill="#1d6b68" fill-opacity=".1"/>
+    </pattern>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#152839" flood-opacity=".08"/>
+    </filter>
+    <linearGradient id="attention" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#526f9e" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#1d6b68" stop-opacity=".3"/>
+    </linearGradient>
+    <style>
+      .mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+      .label{font-size:10px;font-weight:700;letter-spacing:1.4px}
+      .tiny{font-size:9px}
+    </style>
+  </defs>
+
+  <rect width="1600" height="960" fill="url(#paper-grid)"/>
+
+  <!-- Prompt window: intentionally placed in the left page margin. -->
+  <g filter="url(#soft-shadow)" opacity=".76">
+    <rect x="18" y="74" width="222" height="190" rx="14" fill="#f8fbfc" stroke="#526f9e" stroke-opacity=".28"/>
+    <rect x="18" y="74" width="222" height="34" rx="14" fill="#182f43"/>
+    <path d="M18 94h222" stroke="#182f43" stroke-width="28"/>
+    <circle cx="38" cy="91" r="4" fill="#cf8061"/>
+    <circle cx="52" cy="91" r="4" fill="#d3b466"/>
+    <circle cx="66" cy="91" r="4" fill="#6ca78f"/>
+    <text x="82" y="95" fill="#dce8ee" class="mono tiny">llm-evaluator</text>
+    <text x="34" y="130" fill="#1d6b68" class="mono label">PROMPT</text>
+    <rect x="34" y="143" width="187" height="12" rx="6" fill="#526f9e" fill-opacity=".13"/>
+    <rect x="34" y="164" width="159" height="9" rx="4.5" fill="#182f43" fill-opacity=".13"/>
+    <rect x="34" y="181" width="176" height="9" rx="4.5" fill="#182f43" fill-opacity=".1"/>
+    <rect x="34" y="206" width="48" height="25" rx="8" fill="#dcece8"/>
+    <text x="45" y="222" fill="#1d6b68" class="mono tiny">rubric</text>
+    <rect x="88" y="206" width="55" height="25" rx="8" fill="#e3e8f2"/>
+    <text x="98" y="222" fill="#526f9e" class="mono tiny">report</text>
+    <path d="M158 218h48m-9-8 9 8-9 8" stroke="#cf8061" stroke-opacity=".7"/>
+  </g>
+
+  <!-- Token stream. -->
+  <g opacity=".72" class="mono tiny">
+    <text x="19" y="327" fill="#65717d" class="label">TOKEN STREAM</text>
+    <g stroke="#526f9e" stroke-opacity=".18">
+      <path d="M21 353h214M21 392h214"/>
+    </g>
+    <rect x="20" y="340" width="43" height="25" rx="7" fill="#182f43"/>
+    <text x="28" y="356" fill="#eef5f7">&lt;BOS&gt;</text>
+    <rect x="68" y="340" width="40" height="25" rx="7" fill="#dcece8"/>
+    <text x="76" y="356" fill="#1d6b68">Deep</text>
+    <rect x="113" y="340" width="64" height="25" rx="7" fill="#e3e8f2"/>
+    <text x="121" y="356" fill="#526f9e">Research</text>
+    <rect x="182" y="340" width="53" height="25" rx="7" fill="#f1e3dc"/>
+    <text x="191" y="356" fill="#9b563f">Judge</text>
+    <path d="M33 377c32 28 70 28 100 0s61-27 90 1" stroke="#1d6b68" stroke-opacity=".3" stroke-dasharray="3 5"/>
+  </g>
+
+  <!-- A small attention heatmap, recognisable as transformer attention rather than generic maths. -->
+  <g transform="translate(24 454)" opacity=".72">
+    <text x="0" y="0" fill="#65717d" class="mono label">SELF-ATTENTION</text>
+    <g transform="translate(0 18)">
+      <rect width="184" height="184" rx="12" fill="#f8fbfc" stroke="#526f9e" stroke-opacity=".22"/>
+      <g fill="url(#attention)">
+        <rect x="13" y="13" width="18" height="18" rx="3" opacity=".9"/><rect x="34" y="13" width="18" height="18" rx="3" opacity=".18"/><rect x="55" y="13" width="18" height="18" rx="3" opacity=".32"/><rect x="76" y="13" width="18" height="18" rx="3" opacity=".1"/><rect x="97" y="13" width="18" height="18" rx="3" opacity=".42"/><rect x="118" y="13" width="18" height="18" rx="3" opacity=".14"/><rect x="139" y="13" width="18" height="18" rx="3" opacity=".25"/>
+        <rect x="13" y="34" width="18" height="18" rx="3" opacity=".15"/><rect x="34" y="34" width="18" height="18" rx="3" opacity=".82"/><rect x="55" y="34" width="18" height="18" rx="3" opacity=".24"/><rect x="76" y="34" width="18" height="18" rx="3" opacity=".54"/><rect x="97" y="34" width="18" height="18" rx="3" opacity=".12"/><rect x="118" y="34" width="18" height="18" rx="3" opacity=".3"/><rect x="139" y="34" width="18" height="18" rx="3" opacity=".1"/>
+        <rect x="13" y="55" width="18" height="18" rx="3" opacity=".22"/><rect x="34" y="55" width="18" height="18" rx="3" opacity=".36"/><rect x="55" y="55" width="18" height="18" rx="3" opacity=".88"/><rect x="76" y="55" width="18" height="18" rx="3" opacity=".2"/><rect x="97" y="55" width="18" height="18" rx="3" opacity=".12"/><rect x="118" y="55" width="18" height="18" rx="3" opacity=".48"/><rect x="139" y="55" width="18" height="18" rx="3" opacity=".16"/>
+        <rect x="13" y="76" width="18" height="18" rx="3" opacity=".1"/><rect x="34" y="76" width="18" height="18" rx="3" opacity=".28"/><rect x="55" y="76" width="18" height="18" rx="3" opacity=".38"/><rect x="76" y="76" width="18" height="18" rx="3" opacity=".92"/><rect x="97" y="76" width="18" height="18" rx="3" opacity=".26"/><rect x="118" y="76" width="18" height="18" rx="3" opacity=".15"/><rect x="139" y="76" width="18" height="18" rx="3" opacity=".52"/>
+        <rect x="13" y="97" width="18" height="18" rx="3" opacity=".45"/><rect x="34" y="97" width="18" height="18" rx="3" opacity=".12"/><rect x="55" y="97" width="18" height="18" rx="3" opacity=".18"/><rect x="76" y="97" width="18" height="18" rx="3" opacity=".32"/><rect x="97" y="97" width="18" height="18" rx="3" opacity=".86"/><rect x="118" y="97" width="18" height="18" rx="3" opacity=".25"/><rect x="139" y="97" width="18" height="18" rx="3" opacity=".12"/>
+        <rect x="13" y="118" width="18" height="18" rx="3" opacity=".12"/><rect x="34" y="118" width="18" height="18" rx="3" opacity=".33"/><rect x="55" y="118" width="18" height="18" rx="3" opacity=".56"/><rect x="76" y="118" width="18" height="18" rx="3" opacity=".15"/><rect x="97" y="118" width="18" height="18" rx="3" opacity=".26"/><rect x="118" y="118" width="18" height="18" rx="3" opacity=".91"/><rect x="139" y="118" width="18" height="18" rx="3" opacity=".22"/>
+        <rect x="13" y="139" width="18" height="18" rx="3" opacity=".24"/><rect x="34" y="139" width="18" height="18" rx="3" opacity=".1"/><rect x="55" y="139" width="18" height="18" rx="3" opacity=".2"/><rect x="76" y="139" width="18" height="18" rx="3" opacity=".47"/><rect x="97" y="139" width="18" height="18" rx="3" opacity=".15"/><rect x="118" y="139" width="18" height="18" rx="3" opacity=".3"/><rect x="139" y="139" width="18" height="18" rx="3" opacity=".86"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Model response card in the right margin. -->
+  <g filter="url(#soft-shadow)" opacity=".76">
+    <rect x="1361" y="88" width="221" height="190" rx="14" fill="#f8fbfc" stroke="#1d6b68" stroke-opacity=".28"/>
+    <text x="1380" y="118" fill="#1d6b68" class="mono label">MODEL RESPONSE</text>
+    <path d="M1382 140h160M1382 158h178M1382 176h146" stroke="#182f43" stroke-opacity=".14" stroke-width="9" stroke-linecap="round"/>
+    <rect x="1380" y="202" width="182" height="51" rx="9" fill="#e1eeeb"/>
+    <text x="1394" y="222" fill="#1d6b68" class="mono tiny">reasoning grounded</text>
+    <text x="1394" y="239" fill="#1d6b68" class="mono tiny">in evaluation rubric</text>
+    <circle cx="1545" cy="227" r="9" fill="#1d6b68"/>
+    <path d="m1541 227 3 3 6-7" stroke="white" stroke-width="1.5"/>
+  </g>
+
+  <!-- Transformer/evaluator pipeline. -->
+  <g transform="translate(1374 354)" opacity=".74" class="mono">
+    <text x="0" y="0" fill="#65717d" class="label">EVALUATION PIPELINE</text>
+    <g transform="translate(0 22)">
+      <rect x="0" y="0" width="177" height="42" rx="9" fill="#e3e8f2" stroke="#526f9e" stroke-opacity=".35"/>
+      <text x="17" y="26" fill="#526f9e" font-size="11">01 · tokenize</text>
+      <path d="M88 42v18" stroke="#526f9e" stroke-opacity=".5"/>
+      <path d="m83 55 5 6 5-6" stroke="#526f9e" stroke-opacity=".5"/>
+      <rect x="0" y="61" width="177" height="42" rx="9" fill="#dcece8" stroke="#1d6b68" stroke-opacity=".35"/>
+      <text x="17" y="87" fill="#1d6b68" font-size="11">02 · transformer</text>
+      <path d="M88 103v18" stroke="#1d6b68" stroke-opacity=".5"/>
+      <path d="m83 116 5 6 5-6" stroke="#1d6b68" stroke-opacity=".5"/>
+      <rect x="0" y="122" width="177" height="42" rx="9" fill="#f1e3dc" stroke="#cf8061" stroke-opacity=".4"/>
+      <text x="17" y="148" fill="#9b563f" font-size="11">03 · rubric judge</text>
+      <path d="M88 164v18" stroke="#cf8061" stroke-opacity=".5"/>
+      <path d="m83 177 5 6 5-6" stroke="#cf8061" stroke-opacity=".5"/>
+      <rect x="0" y="183" width="177" height="42" rx="9" fill="#182f43"/>
+      <text x="17" y="209" fill="#eef5f7" font-size="11">04 · reward score</text>
+    </g>
+  </g>
+
+  <!-- Evaluation outcome / reward signal. -->
+  <g transform="translate(1366 720)" opacity=".74" class="mono">
+    <text x="0" y="0" fill="#65717d" class="label">REWARD SIGNAL</text>
+    <rect x="0" y="18" width="196" height="92" rx="12" fill="#f8fbfc" stroke="#526f9e" stroke-opacity=".22"/>
+    <text x="18" y="48" fill="#182f43" font-size="10">reliability</text>
+    <rect x="18" y="60" width="160" height="10" rx="5" fill="#dfe6ea"/>
+    <rect x="18" y="60" width="132" height="10" rx="5" fill="#1d6b68"/>
+    <text x="18" y="91" fill="#65717d" class="tiny">weak</text>
+    <text x="149" y="91" fill="#1d6b68" class="tiny">strong</text>
+  </g>
+
+  <!-- Sparse attention arcs crossing only the far margins. -->
+  <g stroke="#526f9e" stroke-opacity=".12" stroke-width="1.3" stroke-dasharray="4 7">
+    <path d="M12 700c86 61 142 67 227 7M1360 650c81 46 137 49 225-5"/>
+    <path d="M38 850c52-82 112-82 173 0M1384 895c54-91 115-91 177 0"/>
+  </g>
+</svg>
