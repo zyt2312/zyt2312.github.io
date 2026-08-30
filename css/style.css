@@ -226,16 +226,44 @@ section p { margin: .6rem 0; }
   margin: 3.2rem 0 0;
   padding-top: 1.2rem;
   border-top: 1px solid var(--rule);
-  text-align: center;
+}
+.visitors-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
 }
 .visitors-label {
-  margin: 0 0 .65rem;
+  margin: 0 0 .75rem;
   color: var(--muted);
   font-size: .78rem;
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
-.visitors img { display: inline-block; max-width: 100%; height: 22px; }
+.visitors-kicker {
+  color: var(--accent);
+  font-size: .68rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.visitors-panel {
+  padding: 1rem 1.1rem .8rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background:
+    radial-gradient(circle at 100% 0, rgba(31, 92, 58, .08), transparent 34%),
+    var(--card);
+}
+.flag-counter { display: block; width: 100%; max-width: 392px; margin: 0 auto; border: 0; }
+.flag-counter:hover { border: 0; opacity: .9; }
+.visitors .flag-counter img { display: block; width: 100%; max-width: 392px; height: auto; }
+.visitors-note {
+  margin: .7rem 0 0;
+  color: var(--muted);
+  font-size: .72rem;
+  line-height: 1.45;
+  text-align: center;
+}
 
 footer { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule);
          font-size: .82rem; color: var(--muted); }
@@ -258,4 +286,7 @@ footer { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--ru
   .edu-logo-gdufs { width: 165px; height: auto; }
   .pubs .pub-card { grid-template-columns: 1fr; }
   .pub-figure { min-height: 0; aspect-ratio: 16 / 9; }
+  .content, .content section, .visitors { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+  .skills { grid-template-columns: 1fr; gap: .15rem; }
+  .skills dd { margin-bottom: .45rem; overflow-wrap: anywhere; }
 }
