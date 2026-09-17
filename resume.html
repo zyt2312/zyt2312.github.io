@@ -188,6 +188,8 @@
       <h2><span class="en">Research Interests</span><span class="zh">研究兴趣</span></h2>
       <p class="en"><strong>LLM reliability and safety evaluation</strong>, with a focus on deep research, agent training, reward modeling, and reward hacking. I study the detection of potentially malicious behaviors, biases, and safety failures, aiming to build safe, reliable LLM-based multi-agent systems and rigorous, trustworthy benchmarks.</p>
       <p class="zh"><strong>大语言模型的可靠性与安全性评测</strong>，重点关注深度研究（Deep Research）、智能体训练、奖励模型与奖励投机（reward hacking）。研究潜在恶意行为、偏见与安全失效的检测，致力于构建安全可靠的 LLM 多智能体系统及严谨、可信的评测基准。</p>
+      <p class="en">I also maintain an active interest in <strong>agent hardness, agent skills, and AI watermarking</strong>, and closely follow the latest research developments in these emerging areas.</p>
+      <p class="zh">同时对 <strong>agent hardness、智能体技能（agent skills）与 AI 水印</strong>等前沿方向保持积极兴趣，并持续跟踪相关领域的最新研究进展。</p>
     </section>
 
     <section>
@@ -216,6 +218,8 @@
 
     <section>
       <h2><span class="en">Projects</span><span class="zh">项目经历</span></h2>
+      <p class="en"><strong>End-to-end research involvement in all three projects:</strong> research design, implementation, experiments and analysis, and manuscript writing.</p>
+      <p class="zh"><strong>全程参与以下三项研究：</strong>覆盖研究设计、方法实现、实验与分析及论文撰写。</p>
       <div class="item">
         <div class="item-head">
           <span class="item-title">LongJudgeBench: LLM Judge Evaluation of Long-Range Agent Trajectories</span>
@@ -223,12 +227,12 @@
         </div>
         <p class="tech"><span class="en"><strong>First author · Manuscript in preparation:</strong> planned submission to COLING in October 2026.</span><span class="zh"><strong>第一作者 · 论文准备中：</strong>计划于 2026 年 10 月投稿 COLING。</span></p>
         <ul class="en">
-          <li>Designed and led a benchmark testing whether LLM judges can <strong>detect errors, locate them, and cite supporting evidence</strong> in long agent trajectories. Combined <strong>590 real error trajectories</strong> from APB, AgentHallu, and AppWorld with <strong>205 controlled pairs</strong> to measure how evidence distance affects judging.</li>
+          <li>Designed and led a benchmark testing whether LLM judges can <strong>detect errors, locate them, and cite supporting evidence</strong> in long agent trajectories. Combined real error trajectories from APB, AgentHallu, and AppWorld with controlled trajectory pairs to measure how evidence distance affects judging.</li>
           <li>Built an error-injection pipeline based on real failure types, such as wrong parameters, fabricated entities, and API misuse. Each pair differs by one injected step, with all observations produced by <strong>actual simulator execution</strong>; evaluated hidden inconsistencies separately from explicit exceptions.</li>
           <li>Found that judges could still detect errors as evidence became more distant, but were less able to cite the right evidence. Memory probes traced this gap to <strong>failure to revisit evidence</strong> rather than context capacity; requiring explicit citations helped, showing why detection scores alone are insufficient.</li>
         </ul>
         <ul class="zh">
-          <li>设计并主导评测基准，检验 LLM 判官能否在长程智能体轨迹中<strong>发现错误、定位错误并找出证据</strong>。结合 APB、AgentHallu 与 AppWorld 的 <strong>590 条真实错误轨迹</strong>和 <strong>205 对受控轨迹</strong>，测量证据与错误之间的距离如何影响判断。</li>
+          <li>设计并主导评测基准，检验 LLM 判官能否在长程智能体轨迹中<strong>发现错误、定位错误并找出证据</strong>。结合 APB、AgentHallu 与 AppWorld 的真实错误轨迹和受控配对轨迹，测量证据与错误之间的距离如何影响判断。</li>
           <li>根据参数错值、虚构实体、API 误用等真实失败类型构建错误注入流水线。每对轨迹仅有一个注入步骤不同，所有观测均来自<strong>模拟器真实执行</strong>；将隐藏的不一致与直接抛出的异常分开评测。</li>
           <li>发现证据距离变远时，判官仍能发现错误，却更难找对证据。记忆探针表明问题主要在于<strong>没有回头查证</strong>，而非上下文容量不足；强制引用证据可缓解这一问题，说明评测不能只看检出率，还需衡量证据回溯能力。</li>
         </ul>
@@ -257,7 +261,7 @@
           <span class="item-title">CultMetric: Gloss-Grounded Cultural Fidelity Evaluation for Machine Translation</span>
           <span class="date">2026</span>
         </div>
-        <p class="tech"><span class="en"><strong>Co-first author · Submitted:</strong> ACL Rolling Review (ARR).</span><span class="zh"><strong>共同第一作者 · 已投稿：</strong>ACL Rolling Review（ARR）。</span></p>
+        <p class="tech"><span class="en"><strong>Co-first author · Manuscript in preparation:</strong> planned submission to COLING.</span><span class="zh"><strong>共同第一作者 · 论文准备中：</strong>计划投稿 COLING。</span></p>
         <ul class="en">
           <li>Proposed a human-free neuro-symbolic evaluation framework grounded in <strong>872 culture-specific items</strong>, with five interpretable pillars aggregated into deterministic and reproducible scores.</li>
           <li>Evaluated four machine-translation systems on the first five chapters of <em>Journey to the West</em>, totaling 1,598 segments per system.</li>
@@ -288,7 +292,7 @@
         <li>
           Bhaskar Ganesh Devalla*, <strong>Yuting Zhong*</strong>, Dejing Zhou, Junchao Wu, Shudong Liu, Lidia S. Chao, and Derek F. Wong. (2026).
           <span class="pub-title">CultMetric: Gloss-Grounded Cultural Fidelity Evaluation for Machine Translation.</span>
-          <span class="venue"><span class="en">Manuscript submitted to ACL Rolling Review (ARR).</span><span class="zh">已投稿至 ACL Rolling Review（ARR）。</span></span>
+          <span class="venue"><span class="en">Manuscript in preparation; planned submission to COLING.</span><span class="zh">论文准备中；计划投稿 COLING。</span></span>
         </li>
       </ol>
     </section>
