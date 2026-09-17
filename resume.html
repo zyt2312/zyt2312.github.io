@@ -223,14 +223,14 @@
         </div>
         <p class="tech"><span class="en"><strong>First author · Manuscript in preparation:</strong> planned submission to COLING in October 2026.</span><span class="zh"><strong>第一作者 · 论文准备中：</strong>计划于 2026 年 10 月投稿 COLING。</span></p>
         <ul class="en">
-          <li>Designed and led a dual-arm benchmark separating real-world error evaluation from controlled measurement of evidence backtracking: <strong>590 natural error trajectories</strong> from APB, AgentHallu, and AppWorld, plus <strong>205 treated/control pairs</strong> generated through single-error injection with <strong>99.9% replay fidelity</strong>.</li>
-          <li>Developed <strong>detection, localization, and evidence-grounding</strong> metrics with paired evaluation; found that error detection remained stable as backtracking distance increased, while evidence accuracy systematically declined, revealing a gap between judging and substantiating errors.</li>
-          <li>Used memory probes and forced-citation interventions to attribute failures to insufficient evidence revisiting rather than memory capacity and test mitigation; built an agent-regeneration harness separating error consequences from autonomous detection and recovery.</li>
+          <li>Designed and led a benchmark testing whether LLM judges can <strong>detect errors, locate them, and cite supporting evidence</strong> in long agent trajectories. Combined <strong>590 real error trajectories</strong> from APB, AgentHallu, and AppWorld with <strong>205 controlled pairs</strong> to measure how evidence distance affects judging.</li>
+          <li>Built an error-injection pipeline based on real failure types, such as wrong parameters, fabricated entities, and API misuse. Each pair differs by one injected step, with all observations produced by <strong>actual simulator execution</strong>; evaluated hidden inconsistencies separately from explicit exceptions.</li>
+          <li>Found that judges could still detect errors as evidence became more distant, but were less able to cite the right evidence. Memory probes traced this gap to <strong>failure to revisit evidence</strong> rather than context capacity; requiring explicit citations helped, showing why detection scores alone are insufficient.</li>
         </ul>
         <ul class="zh">
-          <li>设计并主导双臂评测基准，将真实错误评测与受控证据回溯测量分轨：整合 APB、AgentHallu 与 AppWorld 的 <strong>590 条自然错误轨迹</strong>，通过单点错误注入构建 <strong>205 对 treated/control 配对轨迹</strong>，实现 <strong>99.9% 重放保真度</strong>。</li>
-          <li>提出<strong>错误检出、定位与证据溯源</strong>三层指标及配对评测协议；发现随回溯距离增加，检出率保持稳定而证据命中率系统性下降，揭示“能判错却无法准确举证”的能力分离。</li>
-          <li>通过记忆探针与强制引用干预，将失效归因于证据回溯不足而非记忆容量，并验证缓解效果；构建智能体重生成框架，解耦错误后果与自主发现、补救能力。</li>
+          <li>设计并主导评测基准，检验 LLM 判官能否在长程智能体轨迹中<strong>发现错误、定位错误并找出证据</strong>。结合 APB、AgentHallu 与 AppWorld 的 <strong>590 条真实错误轨迹</strong>和 <strong>205 对受控轨迹</strong>，测量证据与错误之间的距离如何影响判断。</li>
+          <li>根据参数错值、虚构实体、API 误用等真实失败类型构建错误注入流水线。每对轨迹仅有一个注入步骤不同，所有观测均来自<strong>模拟器真实执行</strong>；将隐藏的不一致与直接抛出的异常分开评测。</li>
+          <li>发现证据距离变远时，判官仍能发现错误，却更难找对证据。记忆探针表明问题主要在于<strong>没有回头查证</strong>，而非上下文容量不足；强制引用证据可缓解这一问题，说明评测不能只看检出率，还需衡量证据回溯能力。</li>
         </ul>
       </div>
 
@@ -239,7 +239,7 @@
           <span class="item-title">DeepResearch RewardBench: Evaluating Reward Models for Deep Research Reports</span>
           <span class="date">2025 – 2026</span>
         </div>
-        <p class="tech"><span class="en"><strong>Co-first author · Accepted:</strong> Findings of EMNLP 2026.</span><span class="zh"><strong>共同第一作者 · 已接收：</strong>EMNLP 2026 Findings。</span></p>
+        <p class="tech"><span class="en">Co-first author · <strong>Accepted to Findings of EMNLP 2026.</strong></span><span class="zh">共同第一作者 · <strong>已被 Findings of EMNLP 2026 接收。</strong></span></p>
         <ul class="en">
           <li>Built a reward-model benchmark for long-form deep-research reports, with an end-to-end pipeline spanning <strong>19 agent/LLM families</strong>; combined automatic filtering and human verification to construct preference data covering <strong>331 tasks and 866 reports</strong>.</li>
           <li>Evaluated <strong>17 models from 7B to 235B</strong> with Best-of-N selection and full-ranking consistency metrics; analyzed URL robustness, input-order bias, and comparative versus pointwise scoring.</li>
@@ -283,7 +283,7 @@
         <li>
           Shudong Liu*, <strong>Yuting Zhong*</strong>, Guanhua Chen, Xinyi Yang, Junnan Liu, Lidia S. Chao, Jiaheng Liu, and Derek F. Wong. (2026).
           <span class="pub-title">DeepResearch RewardBench: Evaluating Reward Models for Deep Research Reports.</span>
-          <span class="venue"><span class="en">Accepted to Findings of EMNLP 2026.</span><span class="zh">已被 EMNLP 2026 Findings 接收。</span></span>
+          <span class="venue"><strong><span class="en">Accepted to Findings of EMNLP 2026.</span><span class="zh">已被 Findings of EMNLP 2026 接收。</span></strong></span>
         </li>
         <li>
           Bhaskar Ganesh Devalla*, <strong>Yuting Zhong*</strong>, Dejing Zhou, Junchao Wu, Shudong Liu, Lidia S. Chao, and Derek F. Wong. (2026).
