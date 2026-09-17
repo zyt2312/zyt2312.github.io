@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yuting Zhong 钟玉婷 — Resume</title>
-  <meta name="description" content="Resume of Yuting Zhong, an M.S. student in Data Science at the University of Macau researching LLM evaluation and reward models." />
+  <meta name="description" content="Resume of Yuting Zhong, an M.S. student at the University of Macau researching LLM reliability and safety, agent evaluation, reward modeling, and trustworthy benchmarks." />
   <style>
     :root {
       --ink: #171717;
@@ -166,13 +166,13 @@
           <span class="location"><span class="en">Macau SAR, China</span><span class="zh">中国澳门</span></span>
         </div>
         <ul>
-          <li><strong>GPA:</strong> 3.62/4.0 · <strong><span class="en">Advisor:</span><span class="zh">导师:</span></strong> <a href="https://www.fst.um.edu.mo/personal/derek-wong/">Prof. Derek F. Wong</a></li>
+          <li><strong>GPA:</strong> 3.62/4.0 · <strong><span class="en">Advisor:</span><span class="zh">导师:</span></strong> <a href="https://personal.fic.um.edu.mo/derek-wong/">Prof. Derek F. Wong</a></li>
         </ul>
       </div>
       <div class="item">
         <div class="item-head">
           <span class="item-title"><span class="en">Guangdong University of Foreign Studies</span><span class="zh">广东外语外贸大学</span></span>
-          <span class="date">2021.09 – 2025.06</span>
+          <span class="date">2021.09 – 2025.07</span>
         </div>
         <div class="subhead">
           <span><span class="en">B.Eng. in Computer Science and Technology</span><span class="zh">计算机科学与技术工学学士</span></span>
@@ -186,8 +186,8 @@
 
     <section>
       <h2><span class="en">Research Interests</span><span class="zh">研究兴趣</span></h2>
-      <p class="en">Large Language Model Evaluation, LLM-as-a-Judge, Reward Modeling, Rubric-Based and Reference-Free Evaluation, LLM Agents, Reinforcement Learning, and Trustworthy NLP.</p>
-      <p class="zh">大语言模型评测、LLM-as-a-Judge、奖励模型、基于评分细则与无参考评测、大语言模型智能体、强化学习及可信自然语言处理。</p>
+      <p class="en"><strong>LLM reliability and safety evaluation</strong>, with a focus on deep research, agent training, reward modeling, and reward hacking. I study the detection of potentially malicious behaviors, biases, and safety failures, aiming to build safe, reliable LLM-based multi-agent systems and rigorous, trustworthy benchmarks.</p>
+      <p class="zh"><strong>大语言模型的可靠性与安全性评测</strong>，重点关注深度研究（Deep Research）、智能体训练、奖励模型与奖励投机（reward hacking）。研究潜在恶意行为、偏见与安全失效的检测，致力于构建安全可靠的 LLM 多智能体系统及严谨、可信的评测基准。</p>
     </section>
 
     <section>
@@ -202,14 +202,14 @@
           <span class="location"><span class="en">Macau SAR, China</span><span class="zh">中国澳门</span></span>
         </div>
         <ul class="en">
-          <li>Conduct research on reliable evaluation for large language models, focusing on reward models, LLM-as-a-judge, and long-form deep-research reports.</li>
+          <li>Conduct research on LLM reliability and safety evaluation, focusing on LLM judges, long-horizon agent trajectories, and reward models for deep research.</li>
           <li>Contribute to benchmark design, dataset construction, large-scale model evaluation, statistical analysis, and manuscript writing.</li>
-          <li>Co-first-authored two 2026 papers, including one accepted to <strong>Findings of EMNLP 2026</strong>.</li>
+          <li>Lead <strong>LongJudgeBench as first author</strong> (planned COLING submission in October 2026); co-first-authored two other manuscripts, including one accepted to <strong>Findings of EMNLP 2026</strong>.</li>
         </ul>
         <ul class="zh">
-          <li>围绕大语言模型可靠评测开展研究,重点关注奖励模型、LLM-as-a-Judge 与长篇深度研究报告。</li>
+          <li>围绕大语言模型可靠性与安全性评测开展研究，重点关注 LLM 判官、长程智能体轨迹与深度研究奖励模型。</li>
           <li>参与基准设计、数据集构建、大规模模型评测、统计分析及论文写作。</li>
-          <li>以共同第一作者身份完成两篇 2026 年论文,其中一篇被 <strong>EMNLP 2026 Findings</strong> 接收。</li>
+          <li>以<strong>第一作者身份主导 LongJudgeBench</strong>（计划于 2026 年 10 月投稿 COLING）；另以共同第一作者身份完成两篇论文，其中一篇被 <strong>EMNLP 2026 Findings</strong> 接收。</li>
         </ul>
       </div>
     </section>
@@ -218,19 +218,35 @@
       <h2><span class="en">Projects</span><span class="zh">项目经历</span></h2>
       <div class="item">
         <div class="item-head">
-          <span class="item-title">DeepResearch RewardBench: Reward-Model Benchmark for Deep-Research Reports</span>
+          <span class="item-title">LongJudgeBench: LLM Judge Evaluation of Long-Range Agent Trajectories</span>
+          <span class="date">2026</span>
+        </div>
+        <p class="tech"><span class="en"><strong>First author · Manuscript in preparation:</strong> planned submission to COLING in October 2026.</span><span class="zh"><strong>第一作者 · 论文准备中：</strong>计划于 2026 年 10 月投稿 COLING。</span></p>
+        <ul class="en">
+          <li>Designed and led a dual-arm benchmark separating real-world error evaluation from controlled measurement of evidence backtracking: <strong>590 natural error trajectories</strong> from APB, AgentHallu, and AppWorld, plus <strong>205 treated/control pairs</strong> generated through single-error injection with <strong>99.9% replay fidelity</strong>.</li>
+          <li>Developed <strong>detection, localization, and evidence-grounding</strong> metrics with paired evaluation; found that error detection remained stable as backtracking distance increased, while evidence accuracy systematically declined, revealing a gap between judging and substantiating errors.</li>
+          <li>Used memory probes and forced-citation interventions to attribute failures to insufficient evidence revisiting rather than memory capacity and test mitigation; built an agent-regeneration harness separating error consequences from autonomous detection and recovery.</li>
+        </ul>
+        <ul class="zh">
+          <li>设计并主导双臂评测基准，将真实错误评测与受控证据回溯测量分轨：整合 APB、AgentHallu 与 AppWorld 的 <strong>590 条自然错误轨迹</strong>，通过单点错误注入构建 <strong>205 对 treated/control 配对轨迹</strong>，实现 <strong>99.9% 重放保真度</strong>。</li>
+          <li>提出<strong>错误检出、定位与证据溯源</strong>三层指标及配对评测协议；发现随回溯距离增加，检出率保持稳定而证据命中率系统性下降，揭示“能判错却无法准确举证”的能力分离。</li>
+          <li>通过记忆探针与强制引用干预，将失效归因于证据回溯不足而非记忆容量，并验证缓解效果；构建智能体重生成框架，解耦错误后果与自主发现、补救能力。</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title">DeepResearch RewardBench: Evaluating Reward Models for Deep Research Reports</span>
           <span class="date">2025 – 2026</span>
         </div>
-        <p class="tech"><strong><span class="en">Tech Stack:</span><span class="zh">技术栈:</span></strong> Python, PyTorch, vLLM, Hugging Face Transformers</p>
+        <p class="tech"><span class="en"><strong>Co-first author · Accepted:</strong> Findings of EMNLP 2026.</span><span class="zh"><strong>共同第一作者 · 已接收：</strong>EMNLP 2026 Findings。</span></p>
         <ul class="en">
-          <li>Built the first reward-model benchmark for long-form deep-research reports, addressing a gap in existing LLM evaluation.</li>
-          <li>Designed an end-to-end data pipeline spanning <strong>19 agent/LLM families</strong>; combined automatic filtering with PhD-level human verification to construct pair, triplet, and quadruplet preference data comprising <strong>331 tasks and 866 reports</strong>.</li>
+          <li>Built a reward-model benchmark for long-form deep-research reports, with an end-to-end pipeline spanning <strong>19 agent/LLM families</strong>; combined automatic filtering and human verification to construct preference data covering <strong>331 tasks and 866 reports</strong>.</li>
           <li>Evaluated <strong>17 models from 7B to 235B</strong> with Best-of-N selection and full-ranking consistency metrics; analyzed URL robustness, input-order bias, and comparative versus pointwise scoring.</li>
           <li>Developed a four-category judge-error taxonomy and a few-shot classifier reaching <strong>~87% agreement</strong> with human annotation.</li>
         </ul>
         <ul class="zh">
-          <li>构建首个面向长篇深度研究报告的奖励模型评测基准,填补现有大语言模型评测在该场景的空白。</li>
-          <li>设计覆盖 <strong>19 个智能体/大模型家族</strong>的端到端数据流水线,结合自动过滤与博士级人工校验,构建包含 <strong>331 项任务、866 份报告</strong>的 pair、triplet 与 quadruplet 偏好数据。</li>
+          <li>构建面向长篇深度研究报告的奖励模型评测基准，设计覆盖 <strong>19 个智能体/大模型家族</strong>的端到端流水线，结合自动过滤与人工校验，产出包含 <strong>331 项任务、866 份报告</strong>的偏好数据。</li>
           <li>基于 Best-of-N 选择与全排序一致性指标评测 <strong>17 个 7B–235B 模型</strong>,并分析 URL 鲁棒性、输入顺序偏差及对比式与打分式范式。</li>
           <li>构建四类裁判错误体系及 few-shot 自动分类器,与人工标注一致率<strong>约 87%</strong>。</li>
         </ul>
@@ -238,10 +254,10 @@
 
       <div class="item">
         <div class="item-head">
-          <span class="item-title">CultMetric: Cultural-Fidelity Evaluation for Classical Chinese Translation</span>
+          <span class="item-title">CultMetric: Gloss-Grounded Cultural Fidelity Evaluation for Machine Translation</span>
           <span class="date">2026</span>
         </div>
-        <p class="tech"><strong><span class="en">Tech Stack:</span><span class="zh">技术栈:</span></strong> Python, PyTorch, Hugging Face Transformers, SciPy</p>
+        <p class="tech"><span class="en"><strong>Co-first author · Submitted:</strong> ACL Rolling Review (ARR).</span><span class="zh"><strong>共同第一作者 · 已投稿：</strong>ACL Rolling Review（ARR）。</span></p>
         <ul class="en">
           <li>Proposed a human-free neuro-symbolic evaluation framework grounded in <strong>872 culture-specific items</strong>, with five interpretable pillars aggregated into deterministic and reproducible scores.</li>
           <li>Evaluated four machine-translation systems on the first five chapters of <em>Journey to the West</em>, totaling 1,598 segments per system.</li>
@@ -256,18 +272,23 @@
     </section>
 
     <section>
-      <h2><span class="en">Publications</span><span class="zh">论文成果</span></h2>
+      <h2><span class="en">Publications &amp; Manuscripts</span><span class="zh">论文成果与在研工作</span></h2>
       <p class="note"><span class="en">* denotes equal contribution.</span><span class="zh">* 表示同等贡献。</span></p>
       <ol class="pub-list">
         <li>
+          <span class="en"><strong>Yuting Zhong</strong> (first author). (2026).</span><span class="zh"><strong>钟玉婷</strong>（第一作者）。（2026）。</span>
+          <span class="pub-title">LongJudgeBench: LLM Judge Evaluation of Long-Range Agent Trajectories.</span>
+          <span class="venue"><span class="en">Manuscript in preparation; planned submission to COLING in October 2026.</span><span class="zh">论文准备中；计划于 2026 年 10 月投稿 COLING。</span></span>
+        </li>
+        <li>
           Shudong Liu*, <strong>Yuting Zhong*</strong>, Guanhua Chen, Xinyi Yang, Junnan Liu, Lidia S. Chao, Jiaheng Liu, and Derek F. Wong. (2026).
           <span class="pub-title">DeepResearch RewardBench: Evaluating Reward Models for Deep Research Reports.</span>
-          <span class="venue">Findings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026).</span>
+          <span class="venue"><span class="en">Accepted to Findings of EMNLP 2026.</span><span class="zh">已被 EMNLP 2026 Findings 接收。</span></span>
         </li>
         <li>
           Bhaskar Ganesh Devalla*, <strong>Yuting Zhong*</strong>, Dejing Zhou, Junchao Wu, Shudong Liu, Lidia S. Chao, and Derek F. Wong. (2026).
-          <span class="pub-title">CultMetric: A Gloss-Grounded Multi-Pillar Framework for Human-Free Cultural Fidelity Evaluation in Classical Chinese Translation.</span>
-          <span class="venue">Manuscript submitted to ACL Rolling Review (ARR).</span>
+          <span class="pub-title">CultMetric: Gloss-Grounded Cultural Fidelity Evaluation for Machine Translation.</span>
+          <span class="venue"><span class="en">Manuscript submitted to ACL Rolling Review (ARR).</span><span class="zh">已投稿至 ACL Rolling Review（ARR）。</span></span>
         </li>
       </ol>
     </section>
