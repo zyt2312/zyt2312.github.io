@@ -20,7 +20,7 @@
       margin: 0;
       background: #ececea;
       color: var(--ink);
-      font-family: Arial, "Helvetica Neue", "Noto Sans SC", sans-serif;
+      font-family: Arial, "Helvetica Neue", "Microsoft YaHei", "Noto Sans SC", sans-serif;
       font-size: 12px;
       line-height: 1.38;
       -webkit-font-smoothing: antialiased;
@@ -64,11 +64,13 @@
       box-shadow: 0 2px 12px rgba(0, 0, 0, .12);
     }
 
-    header { text-align: center; margin-bottom: 12px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 24px; text-align: left; margin-bottom: 16px; }
+    .header-info { min-width: 0; }
+    .portrait { display: block; flex: 0 0 auto; width: 96px; height: 96px; object-fit: contain; border-radius: 50%; }
     h1 { margin: 0 0 4px; font-size: 25px; line-height: 1.1; letter-spacing: .2px; }
     h1 .cn { margin-left: 7px; font-size: 17px; font-weight: 500; }
-    .contact { color: #333; font-size: 11px; }
-    .contact > span + span::before { content: " | "; color: #888; }
+    .contact { display: flex; flex-wrap: wrap; gap: 3px 14px; max-width: 480px; color: #333; font-size: 11px; }
+    .contact > span { overflow-wrap: anywhere; }
 
     section { margin-top: 12px; }
     h2 {
@@ -104,6 +106,11 @@
       body { font-size: 11.5px; }
       .resume { width: 100%; margin: 10px 0 0; padding: 24px 18px; box-shadow: none; }
       .toolbar { width: calc(100% - 24px); }
+      header { gap: 14px; }
+      h1 { font-size: 23px; }
+      h1 .cn { display: block; margin: 5px 0 0; font-size: 16px; }
+      .portrait { width: 78px; height: 78px; }
+      .contact { display: block; }
       .item-head, .subhead { display: block; }
       .date, .location { display: block; margin-top: 1px; white-space: normal; }
       .contact > span { display: block; }
@@ -123,6 +130,11 @@
         box-shadow: none;
       }
       section { margin-top: 9px; }
+      header { margin-bottom: 10px; }
+      .portrait { width: 23mm; height: 23mm; }
+      h2 { break-after: avoid; }
+      .pub-list li { break-inside: avoid; }
+      #publications { break-before: page; }
       h1 { font-size: 22px; }
       h2 { font-size: 11.5px; margin-bottom: 4px; }
       .item { margin: 4px 0 6px; }
@@ -145,6 +157,7 @@
 
   <main class="resume">
     <header>
+      <div class="header-info">
       <h1>Yuting Zhong <span class="cn">钟玉婷</span></h1>
       <div class="contact">
         <span><a href="mailto:mc56403@um.edu.mo">mc56403@um.edu.mo</a></span>
@@ -152,6 +165,8 @@
         <span><a href="https://github.com/zyt2312">github.com/zyt2312</a></span>
         <span><span class="en">Macau SAR, China</span><span class="zh">中国澳门</span></span>
       </div>
+      </div>
+      <img class="portrait" src="images/5.png" alt="Yuting Zhong 钟玉婷" width="96" height="96" />
     </header>
 
     <section>
@@ -222,24 +237,6 @@
       <p class="zh"><strong>全程参与以下三项研究：</strong>覆盖研究设计、方法实现、实验与分析及论文撰写。</p>
       <div class="item">
         <div class="item-head">
-          <span class="item-title">LongJudgeBench: LLM Judge Evaluation of Long-Range Agent Trajectories</span>
-          <span class="date">2026</span>
-        </div>
-        <p class="tech"><span class="en"><strong>First author · Manuscript in preparation:</strong> planned submission to COLING in October 2026.</span><span class="zh"><strong>第一作者 · 论文准备中：</strong>计划于 2026 年 10 月投稿 COLING。</span></p>
-        <ul class="en">
-          <li>Designed and led a benchmark testing whether LLM judges can <strong>detect errors, locate them, and cite supporting evidence</strong> in long agent trajectories. Combined real error trajectories from APB, AgentHallu, and AppWorld with controlled trajectory pairs to measure how evidence distance affects judging.</li>
-          <li>Built an error-injection pipeline based on real failure types, such as wrong parameters, fabricated entities, and API misuse. Each pair differs by one injected step, with all observations produced by <strong>actual simulator execution</strong>; evaluated hidden inconsistencies separately from explicit exceptions.</li>
-          <li>Found that judges could still detect errors as evidence became more distant, but were less able to cite the right evidence. Memory probes traced this gap to <strong>failure to revisit evidence</strong> rather than context capacity; requiring explicit citations helped, showing why detection scores alone are insufficient.</li>
-        </ul>
-        <ul class="zh">
-          <li>设计并主导评测基准，检验 LLM 判官能否在长程智能体轨迹中<strong>发现错误、定位错误并找出证据</strong>。结合 APB、AgentHallu 与 AppWorld 的真实错误轨迹和受控配对轨迹，测量证据与错误之间的距离如何影响判断。</li>
-          <li>根据参数错值、虚构实体、API 误用等真实失败类型构建错误注入流水线。每对轨迹仅有一个注入步骤不同，所有观测均来自<strong>模拟器真实执行</strong>；将隐藏的不一致与直接抛出的异常分开评测。</li>
-          <li>发现证据距离变远时，判官仍能发现错误，却更难找对证据。记忆探针表明问题主要在于<strong>没有回头查证</strong>，而非上下文容量不足；强制引用证据可缓解这一问题，说明评测不能只看检出率，还需衡量证据回溯能力。</li>
-        </ul>
-      </div>
-
-      <div class="item">
-        <div class="item-head">
           <span class="item-title">DeepResearch RewardBench: Evaluating Reward Models for Deep Research Reports</span>
           <span class="date">2025 – 2026</span>
         </div>
@@ -258,24 +255,42 @@
 
       <div class="item">
         <div class="item-head">
+          <span class="item-title">LongJudgeBench: LLM Judge Evaluation of Long-Range Agent Trajectories</span>
+          <span class="date">2026</span>
+        </div>
+        <p class="tech"><span class="en"><strong>First author · Manuscript in preparation:</strong> planned submission to COLING in October 2026.</span><span class="zh"><strong>第一作者 · 论文准备中：</strong>计划于 2026 年 10 月投稿 COLING。</span></p>
+        <ul class="en">
+          <li>Designed and led a benchmark testing whether LLM judges can <strong>detect errors, locate them, and cite supporting evidence</strong> in long agent trajectories. Combined real error trajectories from APB, AgentHallu, and AppWorld with controlled trajectory pairs to measure how evidence distance affects judging.</li>
+          <li>Built an error-injection pipeline based on real failure types, such as wrong parameters, fabricated entities, and API misuse. Each pair differs by one injected step, with all observations produced by <strong>actual simulator execution</strong>; evaluated hidden inconsistencies separately from explicit exceptions.</li>
+          <li>Found that judges could still detect errors as evidence became more distant, but were less able to cite the right evidence. Memory probes traced this gap to <strong>failure to revisit evidence</strong> rather than context capacity; requiring explicit citations helped, showing why detection scores alone are insufficient.</li>
+        </ul>
+        <ul class="zh">
+          <li>设计并主导评测基准，检验 LLM 判官能否在长程智能体轨迹中<strong>发现错误、定位错误并找出证据</strong>。结合 APB、AgentHallu 与 AppWorld 的真实错误轨迹和受控配对轨迹，测量证据与错误之间的距离如何影响判断。</li>
+          <li>根据参数错值、虚构实体、API 误用等真实失败类型构建错误注入流水线。每对轨迹仅有一个注入步骤不同，所有观测均来自<strong>模拟器真实执行</strong>；将隐藏的不一致与直接抛出的异常分开评测。</li>
+          <li>发现证据距离变远时，判官仍能发现错误，却更难找对证据。记忆探针表明问题主要在于<strong>没有回头查证</strong>，而非上下文容量不足；强制引用证据可缓解这一问题，说明评测不能只看检出率，还需衡量证据回溯能力。</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
           <span class="item-title">CultMetric: Gloss-Grounded Cultural Fidelity Evaluation for Machine Translation</span>
           <span class="date">2026</span>
         </div>
         <p class="tech"><span class="en"><strong>Co-first author · Manuscript in preparation:</strong> planned submission to COLING.</span><span class="zh"><strong>共同第一作者 · 论文准备中：</strong>计划投稿 COLING。</span></p>
         <ul class="en">
-          <li>Proposed a human-free neuro-symbolic evaluation framework grounded in <strong>872 culture-specific items</strong>, with five interpretable pillars aggregated into deterministic and reproducible scores.</li>
-          <li>Evaluated four machine-translation systems on the first five chapters of <em>Journey to the West</em>, totaling 1,598 segments per system.</li>
-          <li>Validated discriminative power and independence with Wilcoxon and Spearman tests: system-level ranking matched expert judgement exactly, while correlation with five mainstream metrics remained low (|ρ| &lt; 0.15).</li>
+          <li>Developed a method to check whether translations <strong>preserve cultural meaning</strong>. Built a glossary of <strong>872 expert-validated cultural terms</strong> and supplied relevant definitions and translations to the LLM judge to help it identify lost or misrepresented meaning.</li>
+          <li>Separated <strong>error identification from scoring</strong>: the model identifies and explains translation problems, then fixed rules turn those findings into a 0–100 score. This makes scores traceable and limits the tendency to reward fluent translations that lose cultural content.</li>
+          <li>Evaluated four translation systems on <em>Journey to the West</em>; the resulting system ranking matched expert judgment. Tests with paraphrased translations further showed that the method detects loss of cultural meaning even when the text remains fluent.</li>
         </ul>
         <ul class="zh">
-          <li>提出以 <strong>872 条文化专有项</strong>为知识底座的无人工神经符号评测框架,通过五项可解释指标生成确定且可复现的评分。</li>
-          <li>在《西游记》前五回上评测四个机器翻译系统,每个系统包含 1,598 个句段。</li>
-          <li>通过 Wilcoxon 与 Spearman 检验验证判别力和独立性:系统级排序与专家完全一致,与五个主流指标的相关性保持较低(|ρ| &lt; 0.15)。</li>
+          <li>提出检验译文是否<strong>保留原文文化含义</strong>的评测方法。构建包含 <strong>872 个专家核验词条</strong>的文化词表，将相关释义与译法提供给 LLM 判官，帮助其识别文化含义的遗漏与误译。</li>
+          <li>将<strong>找出问题与计算分数分开</strong>：模型先指出并解释翻译问题，再由固定规则转换为 0–100 分，使评分依据可追溯，减少“译文流畅但文化含义丢失”仍获高分的偏差。</li>
+          <li>在《西游记》上评测四个翻译系统，得到与专家一致的系统排名；通过改写译文的实验，进一步验证该方法能识别语言依然流畅、文化含义却被削弱的情况。</li>
         </ul>
       </div>
     </section>
 
-    <section>
+    <section id="publications">
       <h2><span class="en">Publications &amp; Manuscripts</span><span class="zh">论文成果与在研工作</span></h2>
       <p class="note"><span class="en">* denotes equal contribution.</span><span class="zh">* 表示同等贡献。</span></p>
       <ol class="pub-list">
