@@ -107,11 +107,9 @@
           in the <a href="http://nlp2ct.cis.um.edu.mo/">NLP<sup>2</sup>CT Lab</a>.
         </p>
         <p class="en">
-          My research focuses on <strong>evaluating the reliability and safety of large language models (LLMs)</strong>,
-          with particular interests in deep research, agent training, reward modeling, and reward hacking.
-          I study how to detect potentially malicious behaviors, identify biases, and assess safety
-          in these settings. My goal is to build <strong>safe and reliable LLM-based multi-agent systems</strong>
-          and develop <strong>rigorous, trustworthy benchmarks</strong> for evaluating their capabilities and risks.
+          My research focuses on <strong>LLM evaluation, LLM-as-a-Judge, rubric-based evaluation, and machine learning</strong>.
+          I am particularly interested in evaluating judges on long-horizon agent trajectories and building reliable
+          reward models for complex tasks. I plan to pursue a Ph.D. and continue research in academia.
         </p>
         <p class="en">
           I am deeply grateful to my mentor,
@@ -132,11 +130,8 @@
           导师为 <a href="https://personal.fic.um.edu.mo/derek-wong/">Derek F. Wong 教授</a>。
         </p>
         <p class="zh">
-          我的研究聚焦于<strong>大语言模型（LLM）的可靠性与安全性评测</strong>，
-          重点关注深度研究（Deep Research）、智能体训练（agent training）、奖励模型（reward modeling）与奖励投机（reward hacking）。
-          我致力于检测这些场景中可能出现的恶意行为、识别偏见，并评估模型与智能体的安全表现。
-          我的目标是构建<strong>安全可靠的 LLM 多智能体系统</strong>，
-          并开发<strong>严谨、可信的评测基准（benchmark）</strong>，以系统性地衡量其能力与风险。
+          我的研究兴趣包括<strong>大语言模型评测、LLM-as-a-Judge、基于评分标准（rubric）的评测及机器学习</strong>。
+          我尤其关注长程智能体轨迹中的判官评测，以及复杂任务中的可靠奖励模型，并希望继续攻读博士学位、在学术界深耕。
         </p>
         <p class="zh">
           我由衷感谢我的 mentor <a href="https://sudanl.github.io/">刘树东</a>,
@@ -156,8 +151,8 @@
           <div class="card">
             <span class="card-no">I.</span>
             <h3><span class="en">LLM Reliability &amp; Safety Evaluation</span><span class="zh">大模型可靠性与安全评测</span></h3>
-            <p class="en">Evaluating the reliability, biases, and safety risks of LLM judges through rigorous, trustworthy benchmarks.</p>
-            <p class="zh">研究 LLM 判官的评测可靠性、偏见与潜在安全风险，构建严谨、可信的评测基准。</p>
+            <p class="en">Building rigorous benchmarks to evaluate LLM judges, scoring rubrics, and the reliability of model-generated assessments.</p>
+            <p class="zh">构建严谨的评测基准，衡量 LLM 判官、评分标准及模型生成评价的可靠性。</p>
           </div>
           <div class="card">
             <span class="card-no">II.</span>
@@ -181,9 +176,9 @@
         <h2><span class="num">§&nbsp;03</span><span class="en">News</span><span class="zh">动态</span><span class="tag"><span class="en">RECENT</span><span class="zh">近况</span></span></h2>
         <ul class="news">
           <li>
-            <span class="date">2026-09</span>
-            <span class="en">Preparing <em>LongJudgeBench: LLM Judge Evaluation of Long-Range Agent Trajectories</em> for submission to <strong>ARR</strong> in October 2026.</span>
-            <span class="zh">正在准备 <em>LongJudgeBench: LLM Judge Evaluation of Long-Range Agent Trajectories</em>，计划于 2026 年 10 月投稿至 <strong>ARR</strong>。</span>
+            <span class="date">2026-10</span>
+            <span class="en">Submitted <em>LongJudgeBench</em> and <em>CIFE</em> to the October 2026 <strong>ACL Rolling Review (ARR)</strong>.</span>
+            <span class="zh"><em>LongJudgeBench</em> 与 <em>CIFE</em> 已投稿至 2026 年 10 月 <strong>ACL Rolling Review（ARR）</strong>。</span>
           </li>
           <li>
             <span class="date">2026-08</span>
@@ -262,11 +257,13 @@
           </div>
           <ul class="en">
             <li><strong>DeepResearch RewardBench</strong> (co-first author) — built the first reward-model benchmark for long-form deep-research reports: an end-to-end pipeline over 19 agent/LLM families yielding preference datasets of 331 tasks / 866 reports, evaluation of 17 models (7B–235B), and a few-shot judge-error classifier reaching ~87% agreement with humans. Accepted to Findings of EMNLP 2026.</li>
-            <li><strong>CultMetric</strong> (co-first author) — a human-free, neuro-symbolic cultural-fidelity framework for machine translation, grounded in 872 culture-specific items with five pillars; validated with Wilcoxon and Spearman tests (system ranking matches experts, |ρ|&lt;0.15 vs. mainstream metrics).</li>
+            <li><strong>CIFE</strong> (co-first author) — developed a glossary-grounded, item-level metric for cultural fidelity in literary machine translation. It grades each cultural item with an evidence-checked LLM judgment and was evaluated on English translations of <em>Journey to the West</em> and a Telugu <em>Ramayana</em>; submitted to October 2026 ACL Rolling Review.</li>
+            <li><strong>LongJudgeBench</strong> (first author) — built a benchmark of 590 natural agent trajectories and 262 constructed error cases to measure LLM judges' error detection, localization, and evidence attribution; submitted to October 2026 ACL Rolling Review.</li>
           </ul>
           <ul class="zh">
             <li><strong>DeepResearch RewardBench</strong>(共同第一作者)—— 构建首个面向长篇深度研究报告的奖励模型评测基准:聚合 19 个智能体/大模型家族的端到端数据流水线,产出 331 任务 / 866 份报告的偏好数据集,系统评测 17 个模型(7B–235B),并提炼出与人工一致率约 87% 的 few-shot 错误分类器。已被 EMNLP 2026 Findings 接收。</li>
-            <li><strong>CultMetric</strong>(共同第一作者)—— 面向机器翻译的无人工、神经符号文化忠实度框架,以 872 条文化专有项为底座、设计五支柱指标;经 Wilcoxon 与 Spearman 检验验证(系统级排序与专家一致,与主流指标 |ρ|&lt;0.15)。</li>
+            <li><strong>CIFE</strong>(共同第一作者)—— 提出基于术语表、逐项评估文学机器翻译文化忠实度的方法；LLM 判官对每个文化特定项评分并提供可核验的译文证据，在《西游记》英文译本和泰卢固语《罗摩衍那》上进行评测；已投稿至 2026 年 10 月 ACL Rolling Review。</li>
+            <li><strong>LongJudgeBench</strong>(第一作者)—— 构建包含 590 条自然智能体轨迹和 262 个构造错误案例的基准，评测 LLM 判官的错误检出、定位与证据归因能力；已投稿至 2026 年 10 月 ACL Rolling Review。</li>
           </ul>
         </div>
       </section>
@@ -277,19 +274,20 @@
         <div class="entry">
           <div class="entry-head">
             <strong>LongJudgeBench</strong>
-            <span class="date"><span class="en">Planned ARR submission · Oct 2026</span><span class="zh">计划投稿 ARR · 2026 年 10 月</span></span>
+            <span class="date"><span class="en">Submitted · ARR Oct 2026</span><span class="zh">已投稿 · 2026 年 10 月 ARR</span></span>
           </div>
-          <p class="en">A benchmark evaluating whether LLM judges can detect errors, locate them, and cite supporting evidence in long-range agent trajectories, examining how evidence distance affects judging. Planned submission to ARR in October 2026.</p>
-          <p class="zh">一个评测 LLM 判官在长程智能体轨迹中发现错误、定位错误并引用支持证据能力的基准，考察证据距离对判断能力的影响。计划于 2026 年 10 月投稿 ARR。</p>
+          <p class="en">Benchmarks three LLM-judge capabilities on agent trajectories: error detection, localization, and attribution of supporting execution evidence. It contains 590 natural trajectories and 262 constructed error cases across five error families; evaluation of 10 judges revealed a substantial evidence-attribution gap.</p>
+          <p class="zh">评测 LLM 判官在智能体轨迹中的三项能力：错误检出、错误定位和支持证据归因。数据集包含 590 条自然轨迹及覆盖五类错误的 262 个构造案例；对 10 个判官的评测发现，证据归因仍存在明显短板。</p>
           <p class="stack">LLM-as-a-Judge · Agent Evaluation · Evidence Grounding</p>
         </div>
         <div class="entry">
           <div class="entry-head">
-            <strong>CultMetric</strong>
+            <strong>CIFE</strong>
+            <span class="date"><span class="en">Submitted · ARR Oct 2026</span><span class="zh">已投稿 · 2026 年 10 月 ARR</span></span>
           </div>
-          <p class="en">A gloss-grounded framework that evaluates the cultural fidelity of machine translation, capturing meaning that surface-level metrics miss.</p>
-          <p class="zh">一个基于注释(gloss)的框架,用于评估机器翻译的文化忠实度,捕捉字面指标无法体现的语义。</p>
-          <p class="stack">Python · PyTorch · Hugging&nbsp;Face Transformers</p>
+          <p class="en">CIFE (Glossary-Grounded, Item-Level Evaluation of Cultural Fidelity in Literary Machine Translation) evaluates cultural items individually. An LLM assigns strategy-constrained severity scores and quotes translation evidence that is automatically checked; evaluated on <em>Journey to the West</em> and a Telugu <em>Ramayana</em>.</p>
+          <p class="zh">CIFE（基于术语表的文学机器翻译文化忠实度逐项评估）逐项评测译文中的文化特定项。LLM 根据翻译策略判定错误严重程度并引用可自动核验的译文证据；评测对象包括《西游记》英文译本和泰卢固语《罗摩衍那》。</p>
+          <p class="stack">LLM-as-a-Judge · Cultural Fidelity · Machine Translation Evaluation</p>
         </div>
         <div class="entry">
           <div class="entry-head">
@@ -310,12 +308,12 @@
           <li class="pub-card pub-card-text">
             <div class="pub-body">
               <div class="pub-meta">
-                <span class="venue-tag"><span class="en">ARR · Planned October 2026 submission</span><span class="zh">ARR · 计划 2026 年 10 月投稿</span></span>
+                <span class="venue-tag"><span class="en">ACL Rolling Review · October 2026</span><span class="zh">ACL Rolling Review · 2026 年 10 月</span></span>
                 <span class="pub-year">2026</span>
               </div>
-              <span class="title">LongJudgeBench: LLM Judge Evaluation of Long-Range Agent Trajectories</span>
+              <span class="title">LongJudgeBench: Benchmarking LLM Judges on Agent Trajectory Error Localization and Evidence Attribution</span>
               <span class="authors"><span class="en"><strong>Yuting Zhong</strong> (first author).</span><span class="zh"><strong>钟玉婷</strong>（第一作者）。</span></span>
-              <span class="venue"><span class="en">Manuscript in preparation; planned submission to ACL Rolling Review (ARR) in October 2026.</span><span class="zh">论文准备中；计划于 2026 年 10 月投稿至 ACL Rolling Review (ARR)。</span></span>
+              <span class="venue"><span class="en">Submitted to ACL Rolling Review (ARR), October 2026.</span><span class="zh">已投稿至 ACL Rolling Review (ARR)，2026 年 10 月。</span></span>
             </div>
           </li>
           <li class="pub-card">
@@ -340,17 +338,15 @@
               </div>
             </div>
           </li>
-          <li class="pub-card">
-            <a class="pub-figure" href="assets/cultmetric-framework.svg" target="_blank" rel="noopener" aria-label="Open the CultMetric framework figure">
-              <img src="assets/cultmetric-framework.svg" alt="CultMetric framework diagram" />
-            </a>
+          <li class="pub-card pub-card-text">
             <div class="pub-body">
               <div class="pub-meta">
+                <span class="venue-tag"><span class="en">ACL Rolling Review · October 2026</span><span class="zh">ACL Rolling Review · 2026 年 10 月</span></span>
                 <span class="pub-year">2026</span>
               </div>
-              <span class="title">CultMetric: Gloss-Grounded Cultural Fidelity Evaluation for Machine Translation</span>
+              <span class="title">CIFE: Glossary-Grounded, Item-Level Evaluation of Cultural Fidelity in Literary Machine Translation</span>
               <span class="authors">Bhaskar Ganesh Devalla*, <strong>Yuting Zhong*</strong>, Dejing Zhou, Junchao Wu, Shudong Liu, Lidia S. Chao, and Derek F. Wong.</span>
-              <span class="venue"><span class="en">Manuscript in preparation.</span><span class="zh">论文准备中。</span></span>
+              <span class="venue"><span class="en">Submitted to ACL Rolling Review (ARR), October 2026.</span><span class="zh">已投稿至 ACL Rolling Review (ARR)，2026 年 10 月。</span></span>
             </div>
           </li>
         </ol>
