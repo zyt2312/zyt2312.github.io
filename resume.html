@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yuting Zhong 钟玉婷 — Resume</title>
-  <meta name="description" content="Resume of Yuting Zhong, an M.S. student at the University of Macau researching LLM reliability and safety, agent evaluation, reward modeling, and trustworthy benchmarks." />
+  <meta name="description" content="Resume of Yuting Zhong, an M.S. student at the University of Macau researching LLM evaluation, LLM-as-a-Judge, rubric-based evaluation, agent evaluation, and reward modeling." />
   <style>
     :root {
       --ink: #171717;
@@ -166,7 +166,7 @@
         <span><span class="en">Macau SAR, China</span><span class="zh">中国澳门</span></span>
       </div>
       </div>
-      <img class="portrait" src="images/5.png" alt="Yuting Zhong 钟玉婷" width="96" height="96" />
+      <img class="portrait" src="images/yutingzhong.png" alt="Yuting Zhong 钟玉婷" width="96" height="96" />
     </header>
 
     <section>
@@ -201,10 +201,22 @@
 
     <section>
       <h2><span class="en">Research Interests</span><span class="zh">研究兴趣</span></h2>
-      <p class="en"><strong>LLM reliability and safety evaluation</strong>, with a focus on deep research, agent training, reward modeling, and reward hacking. I study the detection of potentially malicious behaviors, biases, and safety failures, aiming to build safe, reliable LLM-based multi-agent systems and rigorous, trustworthy benchmarks.</p>
-      <p class="zh"><strong>大语言模型的可靠性与安全性评测</strong>，重点关注深度研究（Deep Research）、智能体训练、奖励模型与奖励投机（reward hacking）。研究潜在恶意行为、偏见与安全失效的检测，致力于构建安全可靠的 LLM 多智能体系统及严谨、可信的评测基准。</p>
-      <p class="en">I also maintain an active interest in <strong>agent hardness, agent skills, and AI watermarking</strong>, and closely follow the latest research developments in these emerging areas.</p>
-      <p class="zh">同时对 <strong>agent hardness、智能体技能（agent skills）与 AI 水印</strong>等前沿方向保持积极兴趣，并持续跟踪相关领域的最新研究进展。</p>
+      <p class="en">My research focuses on <strong>LLM evaluation, LLM-as-a-Judge, rubric-based evaluation, and machine learning</strong>. I am particularly interested in evaluating judges on long-horizon agent trajectories and building reliable reward models for complex tasks.</p>
+      <p class="zh">我的研究兴趣包括<strong>大语言模型评测、LLM-as-a-Judge、基于评分标准（rubric）的评测及机器学习</strong>，重点关注长程智能体轨迹评测，以及复杂任务中的可靠奖励模型。</p>
+    </section>
+
+    <section>
+      <h2><span class="en">News</span><span class="zh">最新动态</span></h2>
+      <ul class="en">
+        <li><strong>2026.10</strong> · Submitted <em>LongJudgeBench</em> and <em>CIFE</em> to the October 2026 ACL Rolling Review (ARR).</li>
+        <li><strong>2026.08</strong> · <em>DeepResearch RewardBench</em> was accepted to Findings of EMNLP 2026.</li>
+        <li><strong>2025.08</strong> · Started the M.S. program in Data Science at the University of Macau and joined the NLP²CT Laboratory.</li>
+      </ul>
+      <ul class="zh">
+        <li><strong>2026.10</strong> · <em>LongJudgeBench</em> 与 <em>CIFE</em> 已投稿至 2026 年 10 月 ACL Rolling Review（ARR）。</li>
+        <li><strong>2026.08</strong> · <em>DeepResearch RewardBench</em> 被 EMNLP 2026 Findings 接收。</li>
+        <li><strong>2025.08</strong> · 开始在澳门大学攻读数据科学硕士学位，并加入 NLP²CT 实验室。</li>
+      </ul>
     </section>
 
     <section>
@@ -221,12 +233,12 @@
         <ul class="en">
           <li>Conduct research on LLM reliability and safety evaluation, focusing on LLM judges, long-horizon agent trajectories, and reward models for deep research.</li>
           <li>Contribute to benchmark design, dataset construction, large-scale model evaluation, statistical analysis, and manuscript writing.</li>
-          <li>Lead <strong>LongJudgeBench as first author</strong> (planned ARR submission in October 2026); co-first-authored two other manuscripts, including one accepted to <strong>Findings of EMNLP 2026</strong>.</li>
+          <li>Lead <strong>LongJudgeBench as first author</strong> and co-first-author <strong>CIFE</strong>; also co-first-authored <strong>DeepResearch RewardBench</strong>, accepted to Findings of EMNLP 2026.</li>
         </ul>
         <ul class="zh">
           <li>围绕大语言模型可靠性与安全性评测开展研究，重点关注 LLM 判官、长程智能体轨迹与深度研究奖励模型。</li>
           <li>参与基准设计、数据集构建、大规模模型评测、统计分析及论文写作。</li>
-          <li>以<strong>第一作者身份主导 LongJudgeBench</strong>（计划于 2026 年 10 月投稿 ARR）；另以共同第一作者身份完成两篇论文，其中一篇被 <strong>EMNLP 2026 Findings</strong> 接收。</li>
+          <li>以<strong>第一作者身份主导 LongJudgeBench</strong>，并列第一作者完成 <strong>CIFE</strong>；同时作为共同第一作者完成 <strong>DeepResearch RewardBench</strong>，该论文已被 EMNLP 2026 Findings 接收。</li>
         </ul>
       </div>
     </section>
@@ -255,37 +267,37 @@
 
       <div class="item">
         <div class="item-head">
-          <span class="item-title">LongJudgeBench: LLM Judge Evaluation of Long-Range Agent Trajectories</span>
+          <span class="item-title">LongJudgeBench: Benchmarking LLM Judges on Agent Trajectory Error Localization and Evidence Attribution</span>
           <span class="date">2026</span>
         </div>
-        <p class="tech"><span class="en"><strong>First author · Manuscript in preparation:</strong> planned submission to ARR in October 2026.</span><span class="zh"><strong>第一作者 · 论文准备中：</strong>计划于 2026 年 10 月投稿 ARR。</span></p>
+        <p class="tech"><span class="en"><strong>First author · Submitted to ACL Rolling Review (October 2026).</strong></span><span class="zh"><strong>第一作者 · 已投稿至 ACL Rolling Review（2026 年 10 月）。</strong></span></p>
         <ul class="en">
-          <li>Designed and led a benchmark testing whether LLM judges can <strong>detect errors, locate them, and cite supporting evidence</strong> in long agent trajectories. Combined real error trajectories from APB, AgentHallu, and AppWorld with controlled trajectory pairs to measure how evidence distance affects judging.</li>
-          <li>Built an error-injection pipeline based on real failure types, such as wrong parameters, fabricated entities, and API misuse. Each pair differs by one injected step, with all observations produced by <strong>actual simulator execution</strong>; evaluated hidden inconsistencies separately from explicit exceptions.</li>
-          <li>Found that judges could still detect errors as evidence became more distant, but were less able to cite the right evidence. Memory probes traced this gap to <strong>failure to revisit evidence</strong> rather than context capacity; requiring explicit citations helped, showing why detection scores alone are insufficient.</li>
+          <li>Introduced a benchmark for three complementary judge capabilities: <strong>error detection, error localization, and attribution of supporting execution evidence</strong>. It contains <strong>590 natural trajectories</strong> (NSet) and <strong>262 constructed error cases</strong> (CSet).</li>
+          <li>Constructed CSet with executable interventions and autonomous agent continuation across <strong>five error families</strong>, providing explicit error locations and supporting evidence references where applicable; evaluated <strong>10 LLM judges</strong>.</li>
+          <li>Found a substantial evidence-attribution gap: on CSet, Claude Opus 5.5 reached <strong>94.6% detection accuracy</strong> and <strong>98.8% conditional localization accuracy</strong>, but only <strong>60.0% Evidence Hit</strong> (the highest among evaluated judges).</li>
         </ul>
         <ul class="zh">
-          <li>设计并主导评测基准，检验 LLM 判官能否在长程智能体轨迹中<strong>发现错误、定位错误并找出证据</strong>。结合 APB、AgentHallu 与 AppWorld 的真实错误轨迹和受控配对轨迹，测量证据与错误之间的距离如何影响判断。</li>
-          <li>根据参数错值、虚构实体、API 误用等真实失败类型构建错误注入流水线。每对轨迹仅有一个注入步骤不同，所有观测均来自<strong>模拟器真实执行</strong>；将隐藏的不一致与直接抛出的异常分开评测。</li>
-          <li>发现证据距离变远时，判官仍能发现错误，却更难找对证据。记忆探针表明问题主要在于<strong>没有回头查证</strong>，而非上下文容量不足；强制引用证据可缓解这一问题，说明评测不能只看检出率，还需衡量证据回溯能力。</li>
+          <li>提出评测 LLM 判官三项能力的基准：在长程智能体轨迹中<strong>发现错误、定位错误并归因支持判断的执行证据</strong>。包含 <strong>590 条自然轨迹</strong>（NSet）和 <strong>262 个构造错误案例</strong>（CSet）。</li>
+          <li>通过可执行干预与智能体自主续写构造 CSet，覆盖<strong>五类错误</strong>，并在适用时提供明确的错误位置及支持证据；共评测 <strong>10 个 LLM 判官</strong>。</li>
+          <li>实验发现证据归因存在明显短板：Claude Opus 5.5 在 CSet 上的错误检出准确率为 <strong>94.6%</strong>，条件定位准确率为 <strong>98.8%</strong>，但 Evidence Hit 仅为 <strong>60.0%</strong>（在参评判官中最高）。</li>
         </ul>
       </div>
 
       <div class="item">
         <div class="item-head">
-          <span class="item-title">CultMetric: Gloss-Grounded Cultural Fidelity Evaluation for Machine Translation</span>
+          <span class="item-title">CIFE: Glossary-Grounded, Item-Level Evaluation of Cultural Fidelity in Literary Machine Translation</span>
           <span class="date">2026</span>
         </div>
-        <p class="tech"><span class="en"><strong>Co-first author · Manuscript in preparation:</strong> planned submission to ARR in October 2026.</span><span class="zh"><strong>共同第一作者 · 论文准备中：</strong>计划于 2026 年 10 月投稿 ARR。</span></p>
+        <p class="tech"><span class="en"><strong>Co-first author · Submitted to ACL Rolling Review (October 2026).</strong></span><span class="zh"><strong>共同第一作者 · 已投稿至 ACL Rolling Review（2026 年 10 月）。</strong></span></p>
         <ul class="en">
-          <li>Developed a method to check whether translations <strong>preserve cultural meaning</strong>. Built a glossary of <strong>872 expert-validated cultural terms</strong> and supplied relevant definitions and translations to the LLM judge to help it identify lost or misrepresented meaning.</li>
-          <li>Separated <strong>error identification from scoring</strong>: the model identifies and explains translation problems, then fixed rules turn those findings into a 0–100 score. This makes scores traceable and limits the tendency to reward fluent translations that lose cultural content.</li>
-          <li>Evaluated four translation systems on <em>Journey to the West</em>; the resulting system ranking matched expert judgment. Tests with paraphrased translations further showed that the method detects loss of cultural meaning even when the text remains fluent.</li>
+          <li>Introduced a reference-free metric that evaluates cultural fidelity at the <strong>glossary-item level</strong>, so culture-specific items in literary translations are assessed rather than being diluted in a sentence-level score.</li>
+          <li>For each item, an LLM judge assigns an MQM-style severity constrained by the named translation strategy and provides a translation quote that is automatically checked, making verdicts auditable.</li>
+          <li>Evaluated English translations of <em>Journey to the West</em> and a Telugu <em>Ramayana</em>. CIFE's correlation with human cultural-fidelity ratings exceeded the baselines, while experiments also exposed limitations such as penalizing some valid names and paraphrases.</li>
         </ul>
         <ul class="zh">
-          <li>提出检验译文是否<strong>保留原文文化含义</strong>的评测方法。构建包含 <strong>872 个专家核验词条</strong>的文化词表，将相关释义与译法提供给 LLM 判官，帮助其识别文化含义的遗漏与误译。</li>
-          <li>将<strong>找出问题与计算分数分开</strong>：模型先指出并解释翻译问题，再由固定规则转换为 0–100 分，使评分依据可追溯，减少“译文流畅但文化含义丢失”仍获高分的偏差。</li>
-          <li>在《西游记》上评测四个翻译系统，得到与专家一致的系统排名；通过改写译文的实验，进一步验证该方法能识别语言依然流畅、文化含义却被削弱的情况。</li>
+          <li>提出一种无需参考译文、基于<strong>术语表逐项评估</strong>文化忠实度的方法，避免文学翻译中的文化特定项被句子级总分稀释。</li>
+          <li>LLM 判官为每个词条给出受翻译策略约束的 MQM 风格严重度，并提供可自动核验的译文引文，使评测结论可审计。</li>
+          <li>在《西游记》英文译本和泰卢固语《罗摩衍那》上进行评测。CIFE 与人工文化忠实度评分的相关性高于各基线；实验也揭示其局限，例如可能惩罚部分有效的人名译法与释义改写。</li>
         </ul>
       </div>
     </section>
@@ -295,19 +307,19 @@
       <p class="note"><span class="en">* denotes equal contribution.</span><span class="zh">* 表示同等贡献。</span></p>
       <ol class="pub-list">
         <li>
-          Shudong Liu*, <strong>Yutingzhong*</strong>, Guanhua Chen, Xinyi Yang, Junnan Liu, Lidia S. Chao, Jiaheng Liu, and Derek F. Wong. (2026).
+          Shudong Liu*, <strong>Yuting Zhong*</strong>, Guanhua Chen, Xinyi Yang, Junnan Liu, Lidia S. Chao, Jiaheng Liu, and Derek F. Wong. (2026).
           <span class="pub-title">DeepResearch RewardBench: Evaluating Reward Models for Deep Research Reports.</span>
           <span class="venue"><strong><span class="en">Accepted to Findings of EMNLP 2026.</span><span class="zh">已被 Findings of EMNLP 2026 接收。</span></strong></span>
         </li>
         <li>
-          <span class="en"><strong>Yutingzhong</strong> (first author). (2026).</span><span class="zh"><strong>Yutingzhong</strong>（第一作者）。（2026）。</span>
-          <span class="pub-title">LongJudgeBench: LLM Judge Evaluation of Long-Range Agent Trajectories.</span>
-          <span class="venue"><span class="en"><strong>Work in progress.</strong> Planned submission to ARR in October 2026.</span><span class="zh"><strong>在研工作。</strong>计划于 2026 年 10 月投稿 ARR。</span></span>
+          <span class="en"><strong>Yuting Zhong</strong> (first author). (2026).</span><span class="zh"><strong>钟玉婷</strong>（第一作者）。（2026）。</span>
+          <span class="pub-title">LongJudgeBench: Benchmarking LLM Judges on Agent Trajectory Error Localization and Evidence Attribution.</span>
+          <span class="venue"><span class="en"><strong>Submitted to ACL Rolling Review (October 2026).</strong></span><span class="zh"><strong>已投稿至 ACL Rolling Review（2026 年 10 月）。</strong></span></span>
         </li>
         <li>
-          Bhaskar Ganesh Devalla*, <strong>Yutingzhong*</strong>, Dejing Zhou, Junchao Wu, Shudong Liu, Lidia S. Chao, and Derek F. Wong. (2026).
-          <span class="pub-title">CultMetric: Gloss-Grounded Cultural Fidelity Evaluation for Machine Translation.</span>
-          <span class="venue"><span class="en"><strong>Work in progress.</strong> Planned submission to ARR in October 2026.</span><span class="zh"><strong>在研工作。</strong>计划于 2026 年 10 月投稿 ARR。</span></span>
+          Bhaskar Ganesh Devalla*, <strong>Yuting Zhong*</strong>, Dejing Zhou, Junchao Wu, Shudong Liu, Lidia S. Chao, and Derek F. Wong. (2026).
+          <span class="pub-title">CIFE: Glossary-Grounded, Item-Level Evaluation of Cultural Fidelity in Literary Machine Translation.</span>
+          <span class="venue"><span class="en"><strong>Submitted to ACL Rolling Review (October 2026).</strong></span><span class="zh"><strong>已投稿至 ACL Rolling Review（2026 年 10 月）。</strong></span></span>
         </li>
       </ol>
     </section>
